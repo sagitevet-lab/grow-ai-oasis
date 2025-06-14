@@ -1,3 +1,4 @@
+
 import React, { useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
@@ -18,22 +19,28 @@ const StartNow = () => {
 
     const data = new FormData(form);
 
-    // Prepare form data for Formspree or your API
-    const payload = {
-      fullName: data.get("fullName"),
-      companyName: data.get("companyName"),
-      role: data.get("role"),
-      email: data.get("email"),
-      phone: data.get("phone"),
-    };
+    // Debug: log all form data
+    for (const pair of data.entries()) {
+      console.log(`[StartNow] Submitting: ${pair[0]} = ${pair[1]}`);
+    }
 
     try {
-      // POST to Formspree (or any email API endpoint you wish)
+      // Don't add custom headers when sending FormData.
+      // Formspree expects the native browser headers with FormData payload.
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(form), // Formspree requires form-encoded
+        body: data,
       });
+
+      // Try to parse response JSON for error/success details if possible
+      let resJson: any = null;
+      try {
+        resJson = await res.clone().json();
+      } catch (parseErr) {
+        // Not a problem; some 204 endpoints and CORS won't send JSON
+      }
+      console.log("[StartNow] Submission result:", res.status, resJson);
+
       if (res.ok) {
         toast({
           title: "Thank you!",
@@ -44,12 +51,17 @@ const StartNow = () => {
           navigate("/");
         }, 1200);
       } else {
+        // If Formspree provides an error message, show it
+        let customError = resJson && resJson.errors && resJson.errors[0]?.message
+          ? resJson.errors[0].message
+          : "Something went wrong submitting your form. Please try again.";
         toast({
           title: "Error",
-          description: "Something went wrong submitting your form. Please try again.",
+          description: customError,
         });
       }
-    } catch (err) {
+    } catch (err: any) {
+      console.error("[StartNow] Submission failed", err);
       toast({
         title: "Error",
         description: "There was a problem submitting your request.",
@@ -130,3 +142,4 @@ const StartNow = () => {
 };
 
 export default StartNow;
+
