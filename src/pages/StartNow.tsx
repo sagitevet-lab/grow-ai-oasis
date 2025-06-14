@@ -1,11 +1,10 @@
-
 import React, { useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xayrlrpr"; // <-- Use your Formspree endpoint here
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwpbbvqj"; // <-- Updated Formspree endpoint
 
 const StartNow = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -142,4 +141,3 @@ const StartNow = () => {
 };
 
 export default StartNow;
-
