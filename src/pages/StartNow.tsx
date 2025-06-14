@@ -1,6 +1,6 @@
 
 import React, { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
@@ -81,6 +81,14 @@ Phone: ${data.get("phone")}
             Submit
           </Button>
         </form>
+        <div className="mt-6 text-center">
+          <Link
+            to="/"
+            className="text-gray-500 underline hover:text-gray-700 text-base transition"
+          >
+            Back to website
+          </Link>
+        </div>
       </div>
     </div>
   );
