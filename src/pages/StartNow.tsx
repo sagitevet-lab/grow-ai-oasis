@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
@@ -40,7 +39,7 @@ Phone: ${data.get("phone")}
   };
 
   return (
-    <div className="min-h-[80vh] bg-green-50 flex flex-col justify-center items-center py-20 px-2">
+    <div className="min-h-[80vh] bg-green-50 flex flex-col justify-center items-center pt-28 pb-20 px-2">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-green-100 px-6 py-10">
         <h2 className="text-3xl font-bold text-green-800 mb-2 text-center">Start Now</h2>
         <p className="mb-7 text-green-900 text-base font-medium text-center">
@@ -95,4 +94,3 @@ Phone: ${data.get("phone")}
 };
 
 export default StartNow;
-
