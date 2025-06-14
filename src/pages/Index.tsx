@@ -12,8 +12,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
--    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white w-full">
-+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white w-full pt-10 md:pt-0">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white w-full pt-16 md:pt-8">
       <HeroSection />
       <AboutSection />
       <HowItWorksSection />
