@@ -11,10 +11,10 @@ const HeroSection = () => {
         {/* Logo top left with extra space */}
         <div className="min-w-[120px] flex flex-col items-center md:items-start md:justify-start md:mt-2 md:mr-12">
           <img
-            src="/lovable-uploads/b438224d-e7e1-4082-8af1-71de6c260fc2.png"
+            src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
             alt="Grow Autonomous Solutions Logo"
-            className="h-28 md:h-32 rounded-xl shadow-md bg-white p-1 mb-2 border border-green-200"
-            style={{ background: "white" }}
+            className="h-28 md:h-32 rounded-none shadow-none p-0 bg-transparent mb-2 border-0"
+            style={{ background: "transparent" }}
           />
         </div>
         {/* Main text content */}

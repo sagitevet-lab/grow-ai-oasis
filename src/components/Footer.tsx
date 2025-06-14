@@ -5,8 +5,8 @@ const Footer = () => (
   <footer className="w-full bg-green-700 py-6 px-6 mt-10 border-t border-green-900">
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between text-white gap-4">
       <div className="text-lg font-bold flex items-center gap-3">
-        {/* Using a white logo for contrast */}
-        <img src="/lovable-uploads/71324fad-df39-454f-9f1d-b6de5949a82a.png" alt="Grow Logo" className="h-8 bg-white rounded-md p-1" />
+        {/* Updated: Using the new logo */}
+        <img src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png" alt="Grow Logo" className="h-8 rounded-none bg-transparent p-0" />
         Grow Autonomous Solutions
       </div>
       <div className="text-sm md:text-right">
