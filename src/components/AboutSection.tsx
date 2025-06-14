@@ -11,7 +11,7 @@ const AboutSection = () => (
         Now stop imagining.<br />
         <span className="text-green-600">The Future of Farming is Here.</span>
       </h2>
-      <p className="mt-5 text-gray-600 animate-fade-in">
+      <p className="text-green-900 text-lg max-w-3xl mx-auto animate-fade-in mb-6">
         In a world facing increasing challenges in food production and climate change, <b>Grow Autonomous Solutions</b> presents a groundbreaking leap. By merging advanced AI with greenhouse technology, we are shaping sustainable agriculture for a more efficient, productive future.
       </p>
     </div>

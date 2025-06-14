@@ -2,14 +2,14 @@
 import React from "react";
 
 const HeroSection = () => (
-  <section className="w-full bg-gradient-to-br from-green-50 to-white py-14 px-6 flex flex-col md:flex-row items-center gap-10 md:gap-20 border-b border-green-200">
-    <div className="flex-1 flex flex-col items-center md:items-start">
-      <img src="/lovable-uploads/b438224d-e7e1-4082-8af1-71de6c260fc2.png" alt="Grow Autonomous Solutions Logo" className="h-24 mb-6" />
-      <h1 className="text-5xl font-extrabold text-green-800 mb-4 animate-fade-in leading-tight">
+  <section className="w-full bg-gradient-to-br from-green-50 to-white py-14 px-6 flex flex-col items-center justify-center text-center border-b border-green-200">
+    <div className="flex flex-col items-center justify-center w-full">
+      <img src="/lovable-uploads/b438224d-e7e1-4082-8af1-71de6c260fc2.png" alt="Grow Autonomous Solutions Logo" className="h-24 mb-6 mx-auto" />
+      <h1 className="text-5xl font-extrabold text-green-800 mb-4 animate-fade-in leading-tight text-center">
         Revolutionizing Agriculture<br />
         <span className="text-green-600">with AI-Powered Insights</span>
       </h1>
-      <p className="text-xl text-green-900 mb-8 animate-fade-in">
+      <p className="text-xl text-green-900 mb-8 animate-fade-in text-center">
         Smarter. Sustainable. Autonomous.<br />
         The future of farming is here.
       </p>
@@ -17,7 +17,7 @@ const HeroSection = () => (
         Learn More
       </a>
     </div>
-    {/* Removed brochure image here */}
+    {/* No brochure image */}
   </section>
 );
 
