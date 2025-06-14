@@ -12,6 +12,12 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <HowItWorksSection />
+      <div className="max-w-5xl mx-auto px-6 mt-8 mb-2 text-center">
+        <p className="text-green-900 text-lg font-semibold animate-fade-in">
+          The software seamlessly integrates with the Greenhouse control computer and various sensors,
+          autonomously managing the entire system without the need for human intervention.
+        </p>
+      </div>
       <YieldTable />
       <FoundersSection />
       <Footer />

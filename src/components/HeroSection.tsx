@@ -17,13 +17,7 @@ const HeroSection = () => (
         Learn More
       </a>
     </div>
-    <div className="flex-1 hidden md:block">
-      <img
-        src="/lovable-uploads/71324fad-df39-454f-9f1d-b6de5949a82a.png"
-        alt="Greenhouse Brochure"
-        className="rounded-xl shadow-2xl border-2 border-green-300 w-full object-cover animate-fade-in"
-      />
-    </div>
+    {/* Removed brochure image here */}
   </section>
 );
 
