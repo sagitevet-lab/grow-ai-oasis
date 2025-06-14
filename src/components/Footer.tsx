@@ -5,7 +5,8 @@ const Footer = () => (
   <footer className="w-full bg-green-700 py-6 px-6 mt-10 border-t border-green-900">
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between text-white gap-4">
       <div className="text-lg font-bold flex items-center gap-3">
-        <img src="/lovable-uploads/b438224d-e7e1-4082-8af1-71de6c260fc2.png" alt="Grow Logo" className="h-8" />
+        {/* Using a white logo for contrast */}
+        <img src="/lovable-uploads/71324fad-df39-454f-9f1d-b6de5949a82a.png" alt="Grow Logo" className="h-8 bg-white rounded-md p-1" />
         Grow Autonomous Solutions
       </div>
       <div className="text-sm md:text-right">
@@ -24,3 +25,4 @@ const Footer = () => (
 );
 
 export default Footer;
+
