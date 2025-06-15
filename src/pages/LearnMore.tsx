@@ -87,22 +87,7 @@ const LearnMore = () => {
               Smart lighting systems tailored to plant needs
             </SolutionFeatureBlock>
             {/* Row 3 */}
-            <div
-              className="
-                md:col-span-2
-                flex flex-col justify-center items-center
-                h-full
-              "
-            >
-              <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={320}>
-                <span className="block font-medium">Fully autonomous operation:</span>
-                <span className="block">no human intervention required</span>
-              </SolutionFeatureBlock>
-            </div>
-            <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={380}
-              // Ensures full width on small screens, bottom right cell on md+
-              className="md:col-span-2 md:row-start-4 md:col-start-1"
-            >
+            <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={380}>
               Predictive crop management - forecast crop needs for planting and yield optimization
             </SolutionFeatureBlock>
           </div>
