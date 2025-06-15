@@ -31,25 +31,23 @@ const LearnMore = () => {
         </section>
 
         {/* Why We Exist */}
-        <section className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight animate-fade-in">Why We Exist</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            <ul className="list-disc list-inside text-green-900 mb-2 space-y-1 animate-fade-in">
-              <li>Rising global food demand</li>
-              <li>Climate change disrupting traditional farming</li>
-              <li>Water shortages and resource scarcity</li>
-              <li>Labor shortages in agriculture</li>
-              <li>Growing consumer demand for sustainable, traceable food</li>
-            </ul>
-            <div className="flex flex-col justify-center items-center md:items-start animate-fade-in [animation-delay:180ms]">
-              <Leaf className="text-green-600 mb-2" size={44} />
-              <p className="text-green-800 font-medium">
-                Year-round, optimized crop production—anywhere, anytime.
-              </p>
-            </div>
+        <section className="mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight animate-fade-in text-center">Why We Exist</h2>
+          <ul className="list-disc list-inside text-green-900 space-y-2 mb-4 animate-fade-in text-center mx-auto max-w-md">
+            <li>Rising global food demand</li>
+            <li>Climate change disrupting traditional farming</li>
+            <li>Water shortages and resource scarcity</li>
+            <li>Labor shortages in agriculture</li>
+            <li>Growing consumer demand for sustainable, traceable food</li>
+          </ul>
+          <div className="mt-2 flex items-center justify-center animate-fade-in [animation-delay:100ms]">
+            <Leaf className="text-green-600 mr-2" size={32} aria-hidden />
+            <span className="text-green-800 font-medium text-lg">
+              Year-round, optimized crop production—anywhere, anytime.
+            </span>
           </div>
-          <div className="mt-4 border-t-2 border-dotted border-green-200" />
-          <p className="mt-3 text-green-900 animate-fade-in [animation-delay:250ms] text-base md:text-lg">
+          <div className="mt-4 border-t-2 border-dotted border-green-200 mx-auto max-w-xl" />
+          <p className="mt-3 text-green-900 animate-fade-in [animation-delay:250ms] text-base md:text-lg text-center max-w-2xl mx-auto">
             We believe the answer lies in intelligent, autonomous greenhouses—controlled environments that deliver consistent, optimized crop production year-round, anywhere.
           </p>
         </section>
@@ -67,11 +65,13 @@ const LearnMore = () => {
             <SolutionFeatureBlock icon={<ThermometerSun className="text-orange-500" />} delay={160}>
               Advanced climate control: temperature, humidity & CO₂ managed 24/7
             </SolutionFeatureBlock>
+            <div className="col-span-2 flex flex-col items-center">
+              <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={320} className="mx-auto">
+                Fully autonomous operation—no human intervention required
+              </SolutionFeatureBlock>
+            </div>
             <SolutionFeatureBlock icon={<Leaf className="text-green-700" />} delay={240}>
               Smart lighting systems tailored to plant needs
-            </SolutionFeatureBlock>
-            <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={320}>
-              Fully autonomous operation—no human intervention required
             </SolutionFeatureBlock>
           </div>
           {/* Decorative slanted divider */}
@@ -80,8 +80,15 @@ const LearnMore = () => {
 
         {/* Results & Performance */}
         <section className="mb-14">
-          <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2 animate-fade-in">Results: <span className="text-green-700">Up to 60% increase in yield</span> per m² <span className="text-base text-green-600 font-normal">(University of Arizona trials)</span></h2>
-          <div className="bg-green-100/90 border border-green-200 rounded-xl p-5 mb-3 shadow animate-fade-in [animation-delay:100ms]">
+          <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2 animate-fade-in text-center">
+            Results: <span className="text-green-700">Up to 60% increase in yield per m²</span>
+          </h2>
+          <div className="flex justify-center">
+            <span className="block text-base text-green-600 font-normal mb-2 animate-fade-in [animation-delay:100ms]">
+              (University of Arizona trials)
+            </span>
+          </div>
+          <div className="bg-green-100/90 border border-green-200 rounded-xl p-5 mb-3 shadow animate-fade-in [animation-delay:180ms] max-w-2xl mx-auto">
             <h3 className="font-semibold text-green-800 mb-1">Proven Performance</h3>
             <p className="mb-2">
               Feasibility Studies from International Challenges:
@@ -96,7 +103,7 @@ const LearnMore = () => {
 
         {/* Market Opportunity */}
         <section className="mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-5 tracking-tight animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-5 tracking-tight animate-fade-in text-center">
             Market Opportunity
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 animate-fade-in">
@@ -145,3 +152,4 @@ const LearnMore = () => {
 };
 
 export default LearnMore;
+
