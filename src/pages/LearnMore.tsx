@@ -3,89 +3,85 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
-const statBox =
-  "flex items-center gap-3 p-4 bg-green-50 rounded-lg shadow-sm border border-green-100 mb-3";
-const sectionTitle =
-  "text-2xl md:text-3xl font-bold text-green-800 mb-3 tracking-tight";
-const section =
-  "mb-10";
+import SolutionFeatureBlock from "@/components/SolutionFeatureBlock";
 
 const LearnMore = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white w-full pt-24 pb-16 px-4 md:px-0 flex flex-col items-center">
-      <div className="w-full max-w-3xl">
+    <div className="relative min-h-screen bg-gradient-to-b from-green-100 via-white to-green-50 w-full pt-24 pb-20 px-2 md:px-0 flex flex-col items-center overflow-x-hidden">
+      {/* Decorative accent circles */}
+      <div className="pointer-events-none absolute -top-10 left-[-70px] w-[180px] h-[180px] rounded-full bg-green-200 opacity-40 blur-2xl z-0" />
+      <div className="pointer-events-none absolute top-[42%] right-[-80px] w-[170px] h-[170px] rounded-full bg-green-300 opacity-20 blur-2xl z-0" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[120px] bg-gradient-to-t from-green-100 via-white blur-md opacity-80 z-0" />
+
+      <div className="relative w-full max-w-3xl z-10">
         {/* About Us & Mission */}
-        <section className={section}>
-          <h1 className="text-4xl font-extrabold text-green-900 mb-2 text-center">About Us</h1>
-          <h2 className="text-lg md:text-xl font-semibold text-green-800 mb-2 text-center">Our Mission</h2>
-          <p className="text-green-900 text-base md:text-lg mb-2 text-center">
-            At Grow Autonomous Solutions, we are revolutionizing agriculture through AI-powered greenhouse technology. Our mission is to help feed the world sustainably—using less water, less land, and fewer inputs, while producing more.
+        <section className="mb-12">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-2 text-center tracking-tighter animate-fade-in">
+            About Us
+          </h1>
+          <h2 className="text-xl md:text-2xl font-semibold text-green-700 mb-3 text-center animate-fade-in [animation-delay:100ms]">
+            Our Mission
+          </h2>
+          <p className="text-green-900 text-base md:text-lg mb-2 text-center max-w-2xl mx-auto animate-fade-in [animation-delay:200ms]">
+            At <span className="font-semibold text-green-800">Grow Autonomous Solutions</span>,
+            we are revolutionizing agriculture through <span className="text-green-700 font-medium">AI-powered greenhouse technology</span>. Our mission is to help feed the world sustainably—using less water, less land, and fewer inputs, while producing more.
           </p>
         </section>
 
         {/* Why We Exist */}
-        <section className={section}>
-          <h2 className={sectionTitle}>Why We Exist</h2>
+        <section className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight animate-fade-in">Why We Exist</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <ul className="list-disc list-inside text-green-900 mb-2 space-y-1">
+            <ul className="list-disc list-inside text-green-900 mb-2 space-y-1 animate-fade-in">
               <li>Rising global food demand</li>
               <li>Climate change disrupting traditional farming</li>
               <li>Water shortages and resource scarcity</li>
               <li>Labor shortages in agriculture</li>
               <li>Growing consumer demand for sustainable, traceable food</li>
             </ul>
-            <div className="flex flex-col justify-center items-center md:items-start">
+            <div className="flex flex-col justify-center items-center md:items-start animate-fade-in [animation-delay:180ms]">
               <Leaf className="text-green-600 mb-2" size={44} />
-              <p className="text-green-800 font-medium">Year-round, optimized crop production—anywhere, anytime.</p>
+              <p className="text-green-800 font-medium">
+                Year-round, optimized crop production—anywhere, anytime.
+              </p>
             </div>
           </div>
-          <p className="mt-3 text-green-900">We believe the answer lies in intelligent, autonomous greenhouses—controlled environments that deliver consistent, optimized crop production year-round, anywhere.</p>
+          <div className="mt-4 border-t-2 border-dotted border-green-200" />
+          <p className="mt-3 text-green-900 animate-fade-in [animation-delay:250ms] text-base md:text-lg">
+            We believe the answer lies in intelligent, autonomous greenhouses—controlled environments that deliver consistent, optimized crop production year-round, anywhere.
+          </p>
         </section>
 
         {/* Our Solution */}
-        <section className={section}>
-          <h2 className={sectionTitle}>Our Solution: The AI-Driven Greenhouse</h2>
-          <div className="grid md:grid-cols-2 gap-4 mb-2">
-            <div className={statBox}>
-              <BarChart2 className="text-green-600" />
-              <span className="text-green-900">
-                AI & IoT for real-time, data-driven crop and climate management
-              </span>
-            </div>
-            <div className={statBox}>
-              <Droplets className="text-blue-400" />
-              <span className="text-green-900">
-                Precision irrigation & fertigation to reduce water use by <span className="font-bold">up to 40%</span>
-              </span>
-            </div>
-            <div className={statBox}>
-              <ThermometerSun className="text-orange-500" />
-              <span className="text-green-900">
-                Advanced climate control: temperature, humidity & CO₂ managed 24/7
-              </span>
-            </div>
-            <div className={statBox}>
-              <Leaf className="text-green-700" />
-              <span className="text-green-900">
-                Smart lighting systems tailored to plant needs
-              </span>
-            </div>
-            <div className={statBox + " md:col-span-2"}>
-              <UserCheck className="text-green-700" />
-              <span className="text-green-900">
-                Fully autonomous operation—no human intervention required
-              </span>
-            </div>
+        <section className="mb-14 relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-5 tracking-tight animate-fade-in">Our Solution: <span className="text-green-700">The AI-Driven Greenhouse</span></h2>
+          <div className="grid md:grid-cols-2 gap-5 mb-2">
+            <SolutionFeatureBlock icon={<BarChart2 />} delay={0}>
+              AI & IoT for real-time, data-driven crop and climate management
+            </SolutionFeatureBlock>
+            <SolutionFeatureBlock icon={<Droplets className="text-blue-400" />} delay={80}>
+              Precision irrigation & fertigation to reduce water use by <span className="font-bold">up to 40%</span>
+            </SolutionFeatureBlock>
+            <SolutionFeatureBlock icon={<ThermometerSun className="text-orange-500" />} delay={160}>
+              Advanced climate control: temperature, humidity & CO₂ managed 24/7
+            </SolutionFeatureBlock>
+            <SolutionFeatureBlock icon={<Leaf className="text-green-700" />} delay={240}>
+              Smart lighting systems tailored to plant needs
+            </SolutionFeatureBlock>
+            <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={320}>
+              Fully autonomous operation—no human intervention required
+            </SolutionFeatureBlock>
           </div>
+          {/* Decorative slanted divider */}
+          <div className="w-full h-3 bg-gradient-to-r from-green-200 via-green-50 to-green-100 rounded-lg mt-10 opacity-85" />
         </section>
 
         {/* Results & Performance */}
-        <section className={section}>
-          <h2 className={sectionTitle}>Results: Up to <span className="text-green-700">60% increase in yield</span> per m² <span className="text-base text-green-600 font-normal">(University of Arizona trials)</span></h2>
-          <div className="bg-green-100 border border-green-200 rounded p-4 mb-3">
+        <section className="mb-14">
+          <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2 animate-fade-in">Results: <span className="text-green-700">Up to 60% increase in yield</span> per m² <span className="text-base text-green-600 font-normal">(University of Arizona trials)</span></h2>
+          <div className="bg-green-100/90 border border-green-200 rounded-xl p-5 mb-3 shadow animate-fade-in [animation-delay:100ms]">
             <h3 className="font-semibold text-green-800 mb-1">Proven Performance</h3>
             <p className="mb-2">
               Feasibility Studies from International Challenges:
@@ -99,24 +95,26 @@ const LearnMore = () => {
         </section>
 
         {/* Market Opportunity */}
-        <section className={section}>
-          <h2 className={sectionTitle}>Market Opportunity</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-            <div className="bg-green-50 rounded-lg p-4 border border-green-100 flex flex-col items-center text-center">
-              <BarChart2 className="text-green-600 mb-2" size={32} />
-              <div className="text-xl font-bold text-green-900">$30.9B</div>
+        <section className="mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-5 tracking-tight animate-fade-in">
+            Market Opportunity
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 animate-fade-in">
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all hover:shadow-md">
+              <BarChart2 className="text-green-600 mb-2" size={36} />
+              <div className="text-2xl font-bold text-green-900">$30.9B</div>
               <div className="text-green-700 text-base">Global greenhouse market (2023)</div>
               <div className="text-green-700 text-sm mt-1">Expected $63.3B by 2032</div>
             </div>
-            <div className="bg-green-50 rounded-lg p-4 border border-green-100 flex flex-col items-center text-center">
-              <BarChart2 className="text-blue-600 mb-2" size={32} />
-              <div className="text-xl font-bold text-green-900">$1.79B</div>
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all hover:shadow-md">
+              <BarChart2 className="text-blue-600 mb-2" size={36} />
+              <div className="text-2xl font-bold text-green-900">$1.79B</div>
               <div className="text-green-700 text-base">Smart greenhouse tech market (2023)</div>
               <div className="text-green-700 text-sm mt-1">10.1% CAGR growth</div>
             </div>
-            <div className="bg-green-50 rounded-lg p-4 border border-green-100 flex flex-col items-center text-center">
-              <Users className="text-green-700 mb-2" size={32} />
-              <div className="text-xl font-bold text-green-900">57.5</div>
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all hover:shadow-md">
+              <Users className="text-green-700 mb-2" size={36} />
+              <div className="text-2xl font-bold text-green-900">57.5</div>
               <div className="text-green-700 text-base">Avg. age of U.S. farmer</div>
               <div className="text-green-700 text-sm mt-1">Urgent need for new generation</div>
             </div>
@@ -124,14 +122,16 @@ const LearnMore = () => {
         </section>
 
         {/* Join the Revolution */}
-        <section className="mt-10 mb-6 text-center">
-          <h2 className="text-2xl text-green-800 font-extrabold mb-2">Join the Revolution</h2>
+        <section className="mt-12 mb-6 text-center animate-fade-in">
+          <h2 className="text-2xl md:text-3xl text-green-800 font-extrabold mb-2">
+            Join the Revolution
+          </h2>
           <div className="text-green-900 text-lg font-medium mb-4">
             We’re seeking partners, investors, and growers who share our vision of a smarter, greener future.<br />
             Let’s grow a sustainable planet—together.
           </div>
           <Button
-            className="bg-green-700 hover:bg-green-900 text-white text-lg px-8 py-3 font-bold rounded-lg shadow-lg transition hover:scale-105"
+            className="bg-green-700 hover:bg-green-900 text-white text-lg px-8 py-3 font-bold rounded-lg shadow-lg transition-all hover:scale-105 animate-fade-in [animation-delay:100ms]"
             onClick={() => navigate("/start")}
             type="button"
             aria-label="Join the Revolution"
