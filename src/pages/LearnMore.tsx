@@ -18,17 +18,6 @@ const LearnMore = () => {
       <div className="pointer-events-none absolute left-0 top-0 w-full h-24 bg-gradient-to-b from-green-300 via-white/10 to-transparent opacity-30 z-0" />
 
       <div className="relative w-full max-w-3xl z-10">
-        {/* Back Button */}
-        <div className="mb-6 flex items-center">
-          <Button
-            className="gap-2 bg-green-700 text-white hover:bg-green-900 transition-all px-4 py-2 font-semibold"
-            onClick={() => navigate("/")}
-            aria-label="Back to Main Page"
-          >
-            <ArrowLeft size={20} />
-            Back to Main Page
-          </Button>
-        </div>
         {/* About Us & Mission */}
         <section className="mb-12 flex flex-col items-center">
           <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-2 text-center tracking-tighter animate-fade-in drop-shadow-[0_2px_5px_rgba(34,197,94,0.06)]">
@@ -43,9 +32,9 @@ const LearnMore = () => {
           </p>
         </section>
 
-        {/* Why We Exist - Centered with left-aligned bullets */}
+        {/* Why We Exist */}
         <section className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight text-center animate-fade-in">Why We Exist</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight animate-fade-in">Why We Exist</h2>
           <ul className="list-disc list-inside text-green-900 space-y-2 animate-fade-in text-left max-w-lg mx-auto">
             <li>Rising global food demand</li>
             <li>Climate change disrupting traditional farming</li>
@@ -90,7 +79,7 @@ const LearnMore = () => {
             <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={380}>
               Predictive crop management - forecast crop needs for planting and yield optimization
             </SolutionFeatureBlock>
-            {/* New autonomous operation block */}
+            {/* Autonomous operation block */}
             <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={460}>
               Autonomous operation without human intervention
             </SolutionFeatureBlock>
@@ -164,6 +153,19 @@ const LearnMore = () => {
             Join the Revolution
           </Button>
         </section>
+        {/* Back Button moved below */}
+        <div className="flex justify-center mt-8">
+          <button
+            className="underline text-black font-semibold text-base hover:text-green-700 transition-colors flex items-center gap-2 bg-transparent p-0 border-0 shadow-none"
+            onClick={() => navigate("/")}
+            aria-label="Back to Main Page"
+            style={{ background: "none" }}
+            type="button"
+          >
+            <ArrowLeft size={20} />
+            Back to Main Page
+          </button>
+        </div>
       </div>
     </div>
   );

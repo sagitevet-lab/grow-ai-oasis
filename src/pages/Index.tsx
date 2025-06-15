@@ -11,6 +11,12 @@ import React from "react";
 const Index = () => {
   const navigate = useNavigate();
 
+  // Function to ensure scrolling to top when navigating to Learn More
+  const handleLearnMore = () => {
+    navigate("/learn");
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white w-full pt-16 md:pt-8">
       <HeroSection />
@@ -28,7 +34,7 @@ const Index = () => {
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center px-6 my-8">
         <button
           className="px-8 py-3 rounded-lg bg-green-100 text-green-800 text-lg font-semibold shadow hover:bg-green-200 transition mb-4"
-          onClick={() => navigate("/learn")}
+          onClick={handleLearnMore}
           type="button"
         >
           Learn More
