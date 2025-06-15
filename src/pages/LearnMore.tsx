@@ -7,6 +7,12 @@ import SolutionFeatureBlock from "@/components/SolutionFeatureBlock";
 const LearnMore = () => {
   const navigate = useNavigate();
 
+  // Handle back navigation and ensure scroll to top on main page
+  const handleBackToMain = () => {
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
+
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-green-100 via-white to-green-50 w-full pt-24 pb-20 px-2 md:px-0 flex flex-col items-center overflow-x-hidden">
       {/* Pop Design: Decorative gradients, top fade, and subtle motion circles */}
@@ -87,24 +93,72 @@ const LearnMore = () => {
           <div className="w-full h-3 bg-gradient-to-r from-green-200 via-green-50 to-green-100 rounded-lg mt-10 opacity-85" />
         </section>
 
-        {/* Results & Performance */}
+        {/* Results & Proven Performance */}
         <section className="mb-14 flex flex-col items-center">
           <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2 animate-fade-in text-center">
-            Results: Up to 60% increase in yield per m²
+            Proven Performance: Autonomous Greenhouse Trials
           </h2>
-          <span className="block text-base text-green-600 font-normal mb-4 animate-fade-in text-center" style={{ marginTop: "0.25rem" }}>
-            (University of Arizona trials)
+          <span className="block text-base text-green-600 font-normal mb-7 animate-fade-in text-center" style={{ marginTop: "0.25rem" }}>
+            Wageningen University Autonomous Greenhouse Challenges
           </span>
-          <div className="bg-green-100/90 border border-green-200 rounded-xl p-5 mb-3 shadow animate-fade-in [animation-delay:100ms] max-w-xl mx-auto">
-            <h3 className="font-semibold text-green-800 mb-1">Proven Performance</h3>
-            <p className="mb-2">
-              Feasibility Studies from International Challenges:
-            </p>
-            <ul className="list-decimal list-inside space-y-1 text-green-900">
-              <li>2019 (<span className="font-semibold">Cucumbers</span>): AI-controlled compartments matched or outperformed human growers</li>
-              <li>2020 (<span className="font-semibold">Tomatoes</span>): AI-managed environments yielded high-quality produce with less input</li>
-              <li>2023 (<span className="font-semibold">Lettuce</span>): 27% higher yield than control using AI + 3D imaging</li>
-            </ul>
+          <div className="grid gap-6 md:grid-cols-3 w-full max-w-3xl animate-fade-in [animation-delay:100ms]">
+            {/* 2019 Card */}
+            <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
+              <div className="text-green-900 font-bold text-lg mb-1">2019 – Cucumber Trial</div>
+              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2019</div>
+              <div className="text-green-600 mb-2 text-xs">Wageningen University</div>
+              <ul className="list-disc ml-4 mb-3 text-green-900 text-sm">
+                <li>
+                  <span className="font-semibold">AI teams outperformed</span> the Dutch grower benchmark in several compartments
+                </li>
+                <li>
+                  <span className="font-semibold">Up to 6.9% higher yield</span> in top-performing autonomous compartment
+                </li>
+              </ul>
+              <div className="mt-auto">
+                <div className="text-green-800 font-medium text-xs mb-1">Savings:</div>
+                <ul className="text-green-900 text-xs ml-4 space-y-1">
+                  <li>Up to 20% less energy use</li>
+                  <li>15% more efficient CO₂ usage</li>
+                </ul>
+              </div>
+            </div>
+            {/* 2020 Card */}
+            <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
+              <div className="text-green-900 font-bold text-lg mb-1">2020 – Cherry Tomato Trial</div>
+              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2020</div>
+              <div className="text-green-600 mb-2 text-xs">Wageningen University</div>
+              <ul className="list-disc ml-4 mb-3 text-green-900 text-sm">
+                <li>
+                  <span className="font-semibold">AI team produced 26.5 kg/m²</span>, outperforming human growers by ~5%
+                </li>
+              </ul>
+              <div className="text-green-800 font-medium text-xs mb-1">Resource savings:</div>
+              <ul className="text-green-900 text-xs ml-4 space-y-1 mb-2">
+                <li>Water use reduced by 8%</li>
+                <li>Energy use optimized via dynamic lighting control</li>
+              </ul>
+              <div className="text-green-800 font-medium text-xs mb-1">Quality:</div>
+              <ul className="text-green-900 text-xs ml-4 space-y-1">
+                <li>Improved fruit quality (higher °Brix and firmness)</li>
+              </ul>
+            </div>
+            {/* 2023 Card */}
+            <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
+              <div className="text-green-900 font-bold text-lg mb-1">2023 – Lettuce Trial</div>
+              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2023</div>
+              <div className="text-green-600 mb-2 text-xs">Wageningen University</div>
+              <ul className="list-disc ml-4 mb-3 text-green-900 text-sm">
+                <li>
+                  <span className="font-semibold">AI-led greenhouse achieved 27% higher yield</span> than the human-managed benchmark
+                </li>
+              </ul>
+              <div className="text-green-800 font-medium text-xs mb-1">Innovations used:</div>
+              <ul className="text-green-900 text-xs ml-4 space-y-1">
+                <li>3D imaging</li>
+                <li>Real-time crop spacing decisions</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -153,11 +207,11 @@ const LearnMore = () => {
             Join the Revolution
           </Button>
         </section>
-        {/* Back Button moved below */}
+        {/* Back Button below "Join the Revolution" */}
         <div className="flex justify-center mt-8">
           <button
             className="underline text-black font-semibold text-base hover:text-green-700 transition-colors flex items-center gap-2 bg-transparent p-0 border-0 shadow-none"
-            onClick={() => navigate("/")}
+            onClick={handleBackToMain}
             aria-label="Back to Main Page"
             style={{ background: "none" }}
             type="button"
