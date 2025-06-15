@@ -109,55 +109,48 @@ const LearnMore = () => {
               <div className="text-green-900 font-bold text-lg mb-1">2019 – Cucumber Trial</div>
               <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2019 – Wageningen University</div>
               <div className="text-green-600 mb-2 text-xs">Outcome:</div>
-              <ul className="list-disc ml-4 mb-2 text-green-900 text-sm">
-                <li>
-                  <span className="font-semibold">AI teams outperformed</span> the Dutch grower benchmark in several compartments
-                </li>
-                <li>
-                  <span className="font-semibold">Up to 6.9% higher yield</span> in top-performing autonomous compartment
-                </li>
-              </ul>
-              <div className="text-green-800 font-medium text-xs mb-1">Savings:</div>
-              <ul className="text-green-900 text-xs ml-4 space-y-1 mb-1">
-                <li>Up to 20% less energy use</li>
-                <li>15% more efficient CO₂ usage</li>
-              </ul>
+              <div className="text-green-900 text-sm mb-1 text-left">
+                <span className="font-semibold">AI teams outperformed</span> the Dutch grower benchmark in several compartments
+                <br />
+                <span className="font-semibold">Up to 6.9% higher yield</span> in top-performing autonomous compartment
+              </div>
+              <div className="text-green-800 font-medium text-xs mb-1 mt-2">Savings:</div>
+              <div className="text-green-900 text-xs mb-1 text-left">
+                Up to 20% less energy use<br />
+                15% more efficient CO₂ usage
+              </div>
             </div>
             {/* 2020 Card */}
             <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
               <div className="text-green-900 font-bold text-lg mb-1">2020 – Cherry Tomato Trial</div>
               <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2020 – Wageningen University</div>
               <div className="text-green-600 mb-2 text-xs">Outcome:</div>
-              <ul className="list-disc ml-4 mb-2 text-green-900 text-sm">
-                <li>
-                  <span className="font-semibold">Winning AI team produced 26.5 kg/m²</span>, outperforming human growers by ~5%
-                </li>
-              </ul>
-              <div className="text-green-800 font-medium text-xs mb-1">Resource savings:</div>
-              <ul className="text-green-900 text-xs ml-4 space-y-1 mb-1">
-                <li>Water use reduced by 8%</li>
-                <li>Energy use optimized via dynamic lighting control</li>
-              </ul>
-              <div className="text-green-800 font-medium text-xs mb-1">Quality:</div>
-              <ul className="text-green-900 text-xs ml-4 space-y-1">
-                <li>Improved fruit quality (higher °Brix and firmness)</li>
-              </ul>
+              <div className="text-green-900 text-sm mb-1 text-left">
+                <span className="font-semibold">Winning AI team produced 26.5 kg/m²</span>, outperforming human growers by ~5%
+              </div>
+              <div className="text-green-800 font-medium text-xs mb-1 mt-2">Resource savings:</div>
+              <div className="text-green-900 text-xs mb-1 text-left">
+                Water use reduced by 8%<br />
+                Energy use optimized via dynamic lighting control
+              </div>
+              <div className="text-green-800 font-medium text-xs mb-1 mt-2">Quality:</div>
+              <div className="text-green-900 text-xs text-left">
+                Improved fruit quality (higher °Brix and firmness)
+              </div>
             </div>
             {/* 2023 Card */}
             <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
               <div className="text-green-900 font-bold text-lg mb-1">2023 – Lettuce Trial</div>
               <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2023 – Wageningen University</div>
               <div className="text-green-600 mb-2 text-xs">Outcome:</div>
-              <ul className="list-disc ml-4 mb-2 text-green-900 text-sm">
-                <li>
-                  <span className="font-semibold">AI-led greenhouse achieved 27% higher yield</span> than the human-managed benchmark
-                </li>
-              </ul>
-              <div className="text-green-800 font-medium text-xs mb-1">Innovations used:</div>
-              <ul className="text-green-900 text-xs ml-4 space-y-1">
-                <li>3D imaging</li>
-                <li>Real-time crop spacing decisions</li>
-              </ul>
+              <div className="text-green-900 text-sm mb-1 text-left">
+                <span className="font-semibold">AI-led greenhouse achieved 27% higher yield</span> than the human-managed benchmark
+              </div>
+              <div className="text-green-800 font-medium text-xs mb-1 mt-2">Innovations used:</div>
+              <div className="text-green-900 text-xs text-left">
+                3D imaging<br />
+                Real-time crop spacing decisions
+              </div>
             </div>
           </div>
         </section>
