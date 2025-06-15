@@ -24,6 +24,16 @@ const Index = () => {
       </div>
       <YieldTable />
       <FoundersSection />
+      {/* New Learn More button */}
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center px-6 my-8">
+        <button
+          className="px-8 py-3 rounded-lg bg-green-100 text-green-800 text-lg font-semibold shadow hover:bg-green-200 transition mb-4"
+          onClick={() => navigate("/learn")}
+          type="button"
+        >
+          Learn More
+        </button>
+      </div>
       {/* Join the Revolution call to action */}
       <div className="max-w-4xl mx-auto text-center px-6 my-14">
         <h3 className="text-3xl md:text-4xl font-extrabold text-green-800 mb-3">Join the Revolution</h3>
