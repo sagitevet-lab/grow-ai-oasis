@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users, Cpu } from "lucide-react";
+import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users, Cpu, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import SolutionFeatureBlock from "@/components/SolutionFeatureBlock";
 
@@ -19,6 +19,18 @@ const LearnMore = () => {
       <div className="pointer-events-none absolute left-0 top-0 w-full h-24 bg-gradient-to-b from-green-300 via-white/10 to-transparent opacity-30 z-0" />
 
       <div className="relative w-full max-w-3xl z-10">
+        {/* Back Button */}
+        <div className="mb-6 flex items-center">
+          <Button
+            variant="ghost"
+            className="gap-2 text-green-900 hover:bg-green-200"
+            onClick={() => navigate("/")}
+            aria-label="Back to Main Page"
+          >
+            <ArrowLeft size={20} />
+            Back to Main Page
+          </Button>
+        </div>
         {/* About Us & Mission */}
         <section className="mb-12 flex flex-col items-center">
           <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-2 text-center tracking-tighter animate-fade-in drop-shadow-[0_2px_5px_rgba(34,197,94,0.06)]">
@@ -33,19 +45,16 @@ const LearnMore = () => {
           </p>
         </section>
 
-        {/* Why We Exist - Centered */}
+        {/* Why We Exist - Centered with left-aligned bullets */}
         <section className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight text-center animate-fade-in">Why We Exist</h2>
-          <ul className="list-disc list-inside text-green-900 space-y-2 animate-fade-in text-center max-w-lg mx-auto">
+          <ul className="list-disc list-inside text-green-900 space-y-2 animate-fade-in text-left max-w-lg mx-auto">
             <li>Rising global food demand</li>
             <li>Climate change disrupting traditional farming</li>
             <li>Water shortages and resource scarcity</li>
             <li>Labor shortages in agriculture</li>
             <li>Growing consumer demand for sustainable, traceable food</li>
           </ul>
-          <div className="mt-5 mx-auto flex justify-center">
-            {/* No leaf or extra text as requested */}
-          </div>
           <div className="mt-4 border-t-2 border-dotted border-green-200 w-full max-w-lg mx-auto" />
           <p className="mt-5 text-green-900 animate-fade-in [animation-delay:250ms] text-base md:text-lg text-center max-w-2xl mx-auto">
             We believe the answer lies in intelligent, autonomous greenhouses—controlled environments that deliver consistent, optimized crop production year-round, anywhere.
@@ -68,10 +77,10 @@ const LearnMore = () => {
             <SolutionFeatureBlock icon={<Leaf className="text-green-700" />} delay={240}>
               Smart lighting systems tailored to plant needs
             </SolutionFeatureBlock>
-            {/* Centered on both md and mobile - new class */}
-            <div className="md:col-span-2 flex justify-center">
+            <div className="md:col-span-2 md:row-span-2 flex justify-center items-stretch">
               <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={320}>
-                Fully autonomous operation—no human intervention required
+                <span className="block font-medium">Fully autonomous operation:</span>
+                <span className="block">no human intervention required</span>
               </SolutionFeatureBlock>
             </div>
             <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={380}>
@@ -86,7 +95,7 @@ const LearnMore = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2 animate-fade-in text-center">
             Results: Up to 60% increase in yield per m²
           </h2>
-          <span className="block text-base text-green-600 font-normal mb-2 animate-fade-in text-center">
+          <span className="block text-base text-green-600 font-normal mb-4 animate-fade-in text-center" style={{ marginTop: "0.25rem" }}>
             (University of Arizona trials)
           </span>
           <div className="bg-green-100/90 border border-green-200 rounded-xl p-5 mb-3 shadow animate-fade-in [animation-delay:100ms] max-w-xl mx-auto">
@@ -153,3 +162,4 @@ const LearnMore = () => {
 };
 
 export default LearnMore;
+
