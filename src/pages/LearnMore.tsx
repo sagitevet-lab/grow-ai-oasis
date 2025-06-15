@@ -40,7 +40,9 @@ const LearnMore = () => {
 
         {/* Why We Exist */}
         <section className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight animate-fade-in">Why We Exist</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight animate-fade-in text-center">
+            Why We Exist
+          </h2>
           <ul className="list-disc list-inside text-green-900 space-y-2 animate-fade-in text-left max-w-lg mx-auto">
             <li>Rising global food demand</li>
             <li>Climate change disrupting traditional farming</li>
@@ -105,9 +107,9 @@ const LearnMore = () => {
             {/* 2019 Card */}
             <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
               <div className="text-green-900 font-bold text-lg mb-1">2019 – Cucumber Trial</div>
-              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2019</div>
-              <div className="text-green-600 mb-2 text-xs">Wageningen University</div>
-              <ul className="list-disc ml-4 mb-3 text-green-900 text-sm">
+              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2019 – Wageningen University</div>
+              <div className="text-green-600 mb-2 text-xs">Outcome:</div>
+              <ul className="list-disc ml-4 mb-2 text-green-900 text-sm">
                 <li>
                   <span className="font-semibold">AI teams outperformed</span> the Dutch grower benchmark in several compartments
                 </li>
@@ -115,26 +117,24 @@ const LearnMore = () => {
                   <span className="font-semibold">Up to 6.9% higher yield</span> in top-performing autonomous compartment
                 </li>
               </ul>
-              <div className="mt-auto">
-                <div className="text-green-800 font-medium text-xs mb-1">Savings:</div>
-                <ul className="text-green-900 text-xs ml-4 space-y-1">
-                  <li>Up to 20% less energy use</li>
-                  <li>15% more efficient CO₂ usage</li>
-                </ul>
-              </div>
+              <div className="text-green-800 font-medium text-xs mb-1">Savings:</div>
+              <ul className="text-green-900 text-xs ml-4 space-y-1 mb-1">
+                <li>Up to 20% less energy use</li>
+                <li>15% more efficient CO₂ usage</li>
+              </ul>
             </div>
             {/* 2020 Card */}
             <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
               <div className="text-green-900 font-bold text-lg mb-1">2020 – Cherry Tomato Trial</div>
-              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2020</div>
-              <div className="text-green-600 mb-2 text-xs">Wageningen University</div>
-              <ul className="list-disc ml-4 mb-3 text-green-900 text-sm">
+              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2020 – Wageningen University</div>
+              <div className="text-green-600 mb-2 text-xs">Outcome:</div>
+              <ul className="list-disc ml-4 mb-2 text-green-900 text-sm">
                 <li>
-                  <span className="font-semibold">AI team produced 26.5 kg/m²</span>, outperforming human growers by ~5%
+                  <span className="font-semibold">Winning AI team produced 26.5 kg/m²</span>, outperforming human growers by ~5%
                 </li>
               </ul>
               <div className="text-green-800 font-medium text-xs mb-1">Resource savings:</div>
-              <ul className="text-green-900 text-xs ml-4 space-y-1 mb-2">
+              <ul className="text-green-900 text-xs ml-4 space-y-1 mb-1">
                 <li>Water use reduced by 8%</li>
                 <li>Energy use optimized via dynamic lighting control</li>
               </ul>
@@ -146,9 +146,9 @@ const LearnMore = () => {
             {/* 2023 Card */}
             <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
               <div className="text-green-900 font-bold text-lg mb-1">2023 – Lettuce Trial</div>
-              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2023</div>
-              <div className="text-green-600 mb-2 text-xs">Wageningen University</div>
-              <ul className="list-disc ml-4 mb-3 text-green-900 text-sm">
+              <div className="text-green-700 text-xs font-semibold mb-2">Autonomous Greenhouse Challenge 2023 – Wageningen University</div>
+              <div className="text-green-600 mb-2 text-xs">Outcome:</div>
+              <ul className="list-disc ml-4 mb-2 text-green-900 text-sm">
                 <li>
                   <span className="font-semibold">AI-led greenhouse achieved 27% higher yield</span> than the human-managed benchmark
                 </li>
