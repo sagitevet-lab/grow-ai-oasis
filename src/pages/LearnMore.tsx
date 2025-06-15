@@ -90,6 +90,10 @@ const LearnMore = () => {
             <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={380}>
               Predictive crop management - forecast crop needs for planting and yield optimization
             </SolutionFeatureBlock>
+            {/* New autonomous operation block */}
+            <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={460}>
+              Autonomous operation without human intervention
+            </SolutionFeatureBlock>
           </div>
           <div className="w-full h-3 bg-gradient-to-r from-green-200 via-green-50 to-green-100 rounded-lg mt-10 opacity-85" />
         </section>
