@@ -61,29 +61,48 @@ const LearnMore = () => {
 
         {/* Our Solution */}
         <section className="mb-14 relative">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6 tracking-tight animate-fade-in text-center">Our Solution: <span className="text-green-700">The AI-Driven Greenhouse</span></h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-2
-            md:grid-cols-2 md:grid-rows-3
-            [&>*]:flex [&>*]:flex-col [&>*]:justify-center [&>*]:h-32">
-            <SolutionFeatureBlock icon={<BarChart2 />} delay={0}>
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6 tracking-tight animate-fade-in text-center">
+            Our Solution: <span className="text-green-700">The AI-Driven Greenhouse</span>
+          </h2>
+          <div
+            className="
+              grid grid-cols-1 gap-6 mb-2
+              sm:grid-cols-1
+              md:grid-cols-2 md:grid-rows-3
+              max-w-3xl mx-auto
+            "
+          >
+            {/* Row 1 */}
+            <SolutionFeatureBlock icon={<BarChart2 className="text-green-600" />} delay={0}>
               AI & IoT for real-time, data-driven crop and climate management
             </SolutionFeatureBlock>
             <SolutionFeatureBlock icon={<Droplets className="text-blue-400" />} delay={80}>
               Precision irrigation & fertigation to reduce water use by <span className="font-bold">up to 40%</span>
             </SolutionFeatureBlock>
+            {/* Row 2 */}
             <SolutionFeatureBlock icon={<ThermometerSun className="text-orange-500" />} delay={160}>
               Advanced climate control: temperature, humidity & CO₂ managed 24/7
             </SolutionFeatureBlock>
             <SolutionFeatureBlock icon={<Leaf className="text-green-700" />} delay={240}>
               Smart lighting systems tailored to plant needs
             </SolutionFeatureBlock>
-            <div className="row-span-2 md:row-span-2 md:col-span-2 flex flex-col justify-center items-center h-32">
+            {/* Row 3 */}
+            <div
+              className="
+                md:col-span-2
+                flex flex-col justify-center items-center
+                h-full
+              "
+            >
               <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={320}>
                 <span className="block font-medium">Fully autonomous operation:</span>
                 <span className="block">no human intervention required</span>
               </SolutionFeatureBlock>
             </div>
-            <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={380}>
+            <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={380}
+              // Ensures full width on small screens, bottom right cell on md+
+              className="md:col-span-2 md:row-start-4 md:col-start-1"
+            >
               Predictive crop management - forecast crop needs for planting and yield optimization
             </SolutionFeatureBlock>
           </div>
