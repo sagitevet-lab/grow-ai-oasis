@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users, Cpu, ArrowLeft } from "lucide-react";
@@ -22,8 +21,7 @@ const LearnMore = () => {
         {/* Back Button */}
         <div className="mb-6 flex items-center">
           <Button
-            variant="ghost"
-            className="gap-2 text-green-900 hover:bg-green-200"
+            className="gap-2 bg-green-700 text-white hover:bg-green-900 transition-all px-4 py-2 font-semibold"
             onClick={() => navigate("/")}
             aria-label="Back to Main Page"
           >
@@ -36,7 +34,7 @@ const LearnMore = () => {
           <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-2 text-center tracking-tighter animate-fade-in drop-shadow-[0_2px_5px_rgba(34,197,94,0.06)]">
             About Us
           </h1>
-          <h2 className="text-xl md:text-2xl font-semibold text-green-700 mb-3 text-center animate-fade-in [animation-delay:100ms]">
+          <h2 className="text-xl md:text-2xl font-semibold text-green-700 mb-3 text-center animate-fade-in [animation-delay:100ms] underline decoration-green-600 decoration-2 underline-offset-4">
             Our Mission
           </h2>
           <p className="text-green-900 text-base md:text-lg mb-2 text-center max-w-2xl mx-auto animate-fade-in [animation-delay:200ms]">
@@ -64,7 +62,9 @@ const LearnMore = () => {
         {/* Our Solution */}
         <section className="mb-14 relative">
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6 tracking-tight animate-fade-in text-center">Our Solution: <span className="text-green-700">The AI-Driven Greenhouse</span></h2>
-          <div className="grid md:grid-cols-2 gap-5 mb-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-2
+            md:grid-cols-2 md:grid-rows-3
+            [&>*]:flex [&>*]:flex-col [&>*]:justify-center [&>*]:h-32">
             <SolutionFeatureBlock icon={<BarChart2 />} delay={0}>
               AI & IoT for real-time, data-driven crop and climate management
             </SolutionFeatureBlock>
@@ -77,7 +77,7 @@ const LearnMore = () => {
             <SolutionFeatureBlock icon={<Leaf className="text-green-700" />} delay={240}>
               Smart lighting systems tailored to plant needs
             </SolutionFeatureBlock>
-            <div className="md:col-span-2 md:row-span-2 flex justify-center items-stretch">
+            <div className="row-span-2 md:row-span-2 md:col-span-2 flex flex-col justify-center items-center h-32">
               <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={320}>
                 <span className="block font-medium">Fully autonomous operation:</span>
                 <span className="block">no human intervention required</span>
@@ -162,4 +162,3 @@ const LearnMore = () => {
 };
 
 export default LearnMore;
-
