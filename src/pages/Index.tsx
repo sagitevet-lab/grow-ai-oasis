@@ -31,22 +31,13 @@ const Index = () => {
           Let’s Grow a Sustainable Future Together <br />
           Partner with Grow Autonomous Solutions and be part of the agricultural future that is not only productive but also responsible. Together, we can meet the growing global demand for food while preserving the planet for future generations.
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-1">
-          <button
-            className="px-8 py-3 rounded-lg bg-green-700 text-white text-lg font-bold shadow-lg hover:bg-green-900 transition hover:scale-105"
-            onClick={() => navigate("/start")}
-            type="button"
-          >
-            Join The Revolution
-          </button>
-          <button
-            className="px-8 py-3 rounded-lg bg-green-100 text-green-700 text-lg font-bold shadow-lg hover:bg-green-200 border border-green-300 transition hover:scale-105"
-            onClick={() => navigate("/learn")}
-            type="button"
-          >
-            Learn More
-          </button>
-        </div>
+        <button
+          className="px-8 py-3 rounded-lg bg-green-700 text-white text-lg font-bold shadow-lg hover:bg-green-900 transition hover:scale-105"
+          onClick={() => navigate("/start")}
+          type="button"
+        >
+          Join The Revolution
+        </button>
       </div>
       <Footer />
     </div>
