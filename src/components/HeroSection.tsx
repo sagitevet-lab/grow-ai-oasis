@@ -55,38 +55,13 @@ const HeroSection = () => {
             </p>
           </div>
           
-          {/* Greenhouse image with overlays */}
+          {/* Greenhouse image without overlays */}
           <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
             <img
               src="/lovable-uploads/c35ed6e8-ec4d-4aed-8ba2-2aa1dbe45290.png"
               alt="AI-Powered Greenhouse with Environmental Monitoring"
               className="w-full h-full object-cover"
             />
-            
-            {/* Environmental data overlays */}
-            <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-lg animate-fade-in">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-800">CO₂</div>
-                <div className="text-xl font-semibold text-green-600">940</div>
-                <div className="text-sm text-green-700">ppm</div>
-              </div>
-            </div>
-            
-            <div className="absolute top-8 right-8 bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-lg animate-fade-in [animation-delay:200ms]">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">💧</div>
-                <div className="text-xl font-semibold text-blue-600">75%</div>
-                <div className="text-sm text-blue-700">Humidity</div>
-              </div>
-            </div>
-            
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-lg animate-fade-in [animation-delay:400ms]">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-orange-600">🌡️</div>
-                <div className="text-xl font-semibold text-orange-600">27°C</div>
-                <div className="text-sm text-orange-700">Temperature</div>
-              </div>
-            </div>
           </div>
           
           <div className="text-center mt-8">
