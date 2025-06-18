@@ -15,64 +15,73 @@ const CONTACTS = [
 ];
 
 const Footer = () => (
-  <footer className="w-full bg-green-700 py-6 px-6 mt-10 border-t border-green-900">
-    <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-center justify-between text-white gap-6 md:gap-4">
-      <div className="w-full md:w-auto flex flex-col items-center md:items-start gap-2 mb-2 md:mb-0">
-        <img
-          src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
-          alt="Grow Logo"
-          className="h-8 rounded-none bg-transparent p-0"
-        />
-        <span className="text-lg font-bold text-center md:text-left">
-          Grow Autonomous Solutions
-        </span>
-      </div>
-      {/* Responsive contacts */}
-      <div className="w-full md:w-auto flex flex-col items-center md:items-end text-sm md:text-right gap-1">
-        {/* MOBILE layout: person block per contact */}
-        <div className="flex flex-col gap-2 w-full md:hidden">
-          {CONTACTS.map((c) => (
-            <div key={c.email} className="flex flex-col items-center w-full">
-              <div className="flex flex-row gap-2 items-center">
-                <b>{c.name}</b>
-                <span>&mdash;</span>
+  <footer className="w-full bg-gradient-to-r from-green-800 to-green-700 py-12 px-6 mt-16 border-t border-green-900 shadow-2xl">
+    <div className="max-w-6xl mx-auto">
+      {/* Main footer content */}
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between text-white gap-8 lg:gap-12 mb-8">
+        {/* Logo and company section */}
+        <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+            <img
+              src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
+              alt="Grow Logo"
+              className="h-12 rounded-none bg-transparent p-0"
+            />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold mb-2">Grow Autonomous Solutions</h3>
+            <p className="text-green-100 text-sm max-w-xs leading-relaxed">
+              Revolutionizing Agriculture with AI-Powered Insights
+            </p>
+          </div>
+        </div>
+
+        {/* Contact information */}
+        <div className="flex flex-col items-center lg:items-end text-center lg:text-right">
+          <h4 className="text-xl font-semibold mb-4 text-green-100">Get in Touch</h4>
+          
+          {/* Mobile layout */}
+          <div className="flex flex-col gap-4 w-full lg:hidden">
+            {CONTACTS.map((contact) => (
+              <div key={contact.email} className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                <div className="font-semibold text-lg mb-2">{contact.name}</div>
                 <a
-                  href={`mailto:${c.email}`}
-                  className="underline hover:text-green-200"
+                  href={`mailto:${contact.email}`}
+                  className="text-green-200 hover:text-white transition-colors duration-200 block mb-1 underline decoration-green-300"
                 >
-                  {c.email}
+                  {contact.email}
                 </a>
+                <div className="text-green-100 text-sm">{contact.phone}</div>
               </div>
-              <div>
-                <span className="text-xs">{c.phone}</span>
+            ))}
+          </div>
+
+          {/* Desktop layout */}
+          <div className="hidden lg:block space-y-3">
+            {CONTACTS.map((contact) => (
+              <div key={contact.email} className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-200">
+                <div className="font-semibold text-lg mb-1">{contact.name}</div>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="text-green-200 hover:text-white transition-colors duration-200 underline decoration-green-300 block"
+                >
+                  {contact.email}
+                </a>
+                <div className="text-green-100 text-sm mt-1">{contact.phone}</div>
               </div>
-            </div>
-          ))}
-        </div>
-        {/* DESKTOP layout: as it was, more compact but both phones */}
-        <div className="hidden md:flex flex-col items-end gap-1">
-          <div>
-            <b>Ronen Aharon</b> &mdash;{" "}
-            <a
-              href="mailto:ronen.aharon@growgroupisrael.com"
-              className="underline hover:text-green-200"
-            >
-              ronen.aharon@growgroupisrael.com
-            </a>
-          </div>
-          <div>
-            <b>Dror Tevet</b> &mdash;{" "}
-            <a
-              href="mailto:dror.tevet@growgroupisrael.com"
-              className="underline hover:text-green-200"
-            >
-              dror.tevet@growgroupisrael.com
-            </a>
-          </div>
-          <div>
-            <span>+972-522859091&nbsp;&nbsp;|&nbsp;&nbsp;+972-522707991</span>
+            ))}
           </div>
         </div>
+      </div>
+
+      {/* Bottom section */}
+      <div className="border-t border-green-600/30 pt-6 text-center">
+        <p className="text-green-100 text-sm">
+          © 2024 Grow Autonomous Solutions. All rights reserved.
+        </p>
+        <p className="text-green-200 text-xs mt-2">
+          Smarter. Sustainable. Autonomous.
+        </p>
       </div>
     </div>
   </footer>
