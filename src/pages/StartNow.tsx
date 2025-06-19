@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwpbbvqj"; // <-- Updated Formspree endpoint
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwpbbvqj";
 
 const StartNow = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -18,27 +18,13 @@ const StartNow = () => {
 
     const data = new FormData(form);
 
-    // Debug: log all form data
-    for (const pair of data.entries()) {
-      console.log(`[StartNow] Submitting: ${pair[0]} = ${pair[1]}`);
-    }
-
     try {
-      // Don't add custom headers when sending FormData.
-      // Formspree expects the native browser headers with FormData payload.
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         body: data,
       });
 
-      // Try to parse response JSON for error/success details if possible
-      let resJson: any = null;
-      try {
-        resJson = await res.clone().json();
-      } catch (parseErr) {
-        // Not a problem; some 204 endpoints and CORS won't send JSON
-      }
-      console.log("[StartNow] Submission result:", res.status, resJson);
+      console.log("[StartNow] Submission result:", res.status);
 
       if (res.ok) {
         toast({
@@ -50,13 +36,20 @@ const StartNow = () => {
           navigate("/");
         }, 1200);
       } else {
-        // If Formspree provides an error message, show it
-        let customError = resJson && resJson.errors && resJson.errors[0]?.message
-          ? resJson.errors[0].message
-          : "Something went wrong submitting your form. Please try again.";
+        // Try to get error details if available
+        let errorMessage = "Something went wrong submitting your form. Please try again.";
+        try {
+          const resJson = await res.json();
+          if (resJson && resJson.errors && resJson.errors[0]?.message) {
+            errorMessage = resJson.errors[0].message;
+          }
+        } catch {
+          // If we can't parse JSON, use default error message
+        }
+        
         toast({
           title: "Error",
-          description: customError,
+          description: errorMessage,
         });
       }
     } catch (err: any) {
@@ -75,7 +68,7 @@ const StartNow = () => {
           Start Now
         </h2>
         <p className="mb-7 text-green-900 text-base font-medium text-center">
-          Please fill in your details and we’ll get in touch!
+          Please fill in your details and we'll get in touch!
         </p>
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
           <div>
