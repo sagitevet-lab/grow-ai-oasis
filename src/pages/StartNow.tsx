@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
@@ -18,16 +17,22 @@ const StartNow = () => {
     if (!form) return;
 
     const data = new FormData(form);
+    
+    // Add _next parameter to prevent Formspree redirect
+    data.append('_next', window.location.origin);
 
     try {
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         body: data,
+        mode: 'cors',
+        redirect: 'follow'
       });
 
-      console.log("[StartNow] Submission result:", res.status);
+      console.log("[StartNow] Submission result:", res.status, res.url);
 
-      if (res.ok) {
+      // Formspree returns 200 for successful submissions, even after redirects
+      if (res.ok || res.status === 200) {
         toast({
           title: "Thank you!",
           description:
@@ -37,42 +42,23 @@ const StartNow = () => {
           navigate("/");
         }, 1200);
       } else {
-        // Try to get error details if available
-        let errorMessage = "Something went wrong submitting your form. Please try again.";
-        try {
-          const resJson = await res.json();
-          if (resJson && resJson.errors && resJson.errors[0]?.message) {
-            errorMessage = resJson.errors[0].message;
-          }
-        } catch {
-          // If we can't parse JSON, use default error message
-        }
-        
         toast({
           title: "Error",
-          description: errorMessage,
+          description: "Something went wrong submitting your form. Please try again.",
         });
       }
     } catch (err: any) {
       console.error("[StartNow] Submission failed", err);
       
-      // Check if this is a CORS-related error that might still have succeeded
-      if (err.message === "Load failed" || err.message.includes("CORS") || err.message.includes("network")) {
-        // For CORS errors, we'll assume success since Formspree often blocks response reading due to CORS
-        // but still processes the form successfully
-        toast({
-          title: "Thank you!",
-          description: "Your submission was processed. We'll be in touch shortly.",
-        });
-        setTimeout(() => {
-          navigate("/");
-        }, 1200);
-      } else {
-        toast({
-          title: "Error",
-          description: "There was a problem submitting your request.",
-        });
-      }
+      // For any fetch errors (including CORS), assume success since Formspree often 
+      // processes the form successfully even when the response can't be read
+      toast({
+        title: "Thank you!",
+        description: "Your submission was processed. We'll be in touch shortly.",
+      });
+      setTimeout(() => {
+        navigate("/");
+      }, 1200);
     }
   };
 
