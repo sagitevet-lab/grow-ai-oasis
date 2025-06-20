@@ -21,11 +21,11 @@ const Footer = () => (
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between text-white gap-8 lg:gap-12 mb-8">
         {/* Logo and company section */}
         <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+          <div className="flex items-center justify-center w-16 h-16">
             <img
-              src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
+              src="/lovable-uploads/cc650172-15d4-40c2-bb27-0c1e9a7b89db.png"
               alt="Grow Logo"
-              className="h-12 rounded-none bg-transparent p-0"
+              className="w-full h-full object-contain"
             />
           </div>
           <div>
