@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users, Cpu, ArrowLeft, Target, TrendingUp, Shield, Zap, Globe } from "lucide-react";
@@ -30,11 +29,8 @@ const LearnMore = () => {
           <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-6 text-center tracking-tighter animate-fade-in drop-shadow-[0_2px_5px_rgba(34,197,94,0.06)]">
             About Us
           </h1>
-          <p className="text-green-900 text-2xl md:text-3xl mb-4 text-center max-w-2xl mx-auto animate-fade-in [animation-delay:200ms] font-semibold leading-relaxed">
-            (Our vision is to transform agriculture into a data-driven industry.)
-          </p>
-          <p className="text-green-600 text-sm text-center max-w-2xl mx-auto animate-fade-in [animation-delay:250ms]">
-            (Our vision is to transform agriculture into a data-driven industry.)
+          <p className="text-green-600 text-xl md:text-2xl mb-4 text-center max-w-2xl mx-auto animate-fade-in [animation-delay:200ms] font-medium leading-relaxed">
+            "Our vision is to transform agriculture into a data-driven industry."
           </p>
           <p className="text-green-900 text-base md:text-lg text-center max-w-2xl mx-auto animate-fade-in [animation-delay:300ms] leading-relaxed">
             By leveraging AI algorithms to process greenhouse sensor data, we aim to create a fully autonomous system that operates smoothly, optimizing growth and sustainability with minimal human intervention.
