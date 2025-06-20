@@ -37,7 +37,7 @@ const Footer = () => (
         </div>
 
         {/* Contact information */}
-        <div className="flex flex-col items-start text-left">
+        <div className="flex flex-col items-center text-center">
           <h4 className="text-xl font-semibold mb-4 text-green-100">Get in Touch</h4>
           
           {/* Mobile layout */}
