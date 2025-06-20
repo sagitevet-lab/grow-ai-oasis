@@ -9,13 +9,14 @@ const HeroSection = () => {
     <section className="w-full bg-gradient-to-br from-green-50 to-white pt-8 pb-16 px-6 flex justify-center border-b border-green-200">
       <div className="flex flex-col w-full max-w-6xl mx-auto gap-8 items-center">
         {/* Logo and main content */}
-        <div className="flex flex-col md:flex-row w-full max-w-5xl mx-auto gap-0 md:gap-10 items-center md:items-start">
-          {/* Logo with fixed sizing */}
-          <div className="flex-shrink-0 flex flex-col items-center md:items-start md:justify-start">
+        <div className="flex flex-col md:flex-row w-full max-w-5xl mx-auto gap-0 md:gap-10 items-stretch">
+          {/* Logo top left with extra space */}
+          <div className="min-w-[120px] flex flex-col items-center md:items-start md:justify-start md:mt-2 md:mr-12">
             <img
               src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
               alt="Grow Autonomous Solutions Logo"
-              className="w-28 h-28 md:w-32 md:h-32 object-contain mb-2"
+              className="h-28 md:h-32 rounded-none shadow-none p-0 bg-transparent mb-2 border-0"
+              style={{ background: "transparent" }}
             />
           </div>
           {/* Main text content */}
