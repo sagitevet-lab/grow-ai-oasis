@@ -15,8 +15,7 @@ const HeroSection = () => {
             <img
               src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
               alt="Grow Autonomous Solutions Logo"
-              className="h-28 md:h-32 rounded-none shadow-none p-0 bg-transparent mb-2 border-0"
-              style={{ background: "transparent" }}
+              className="h-28 md:h-32 object-contain"
             />
           </div>
           {/* Main text content */}

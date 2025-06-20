@@ -21,11 +21,11 @@ const Footer = () => (
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between text-white gap-8 lg:gap-12 mb-8">
         {/* Logo and company section */}
         <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+          <div className="p-4">
             <img
-              src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
+              src="/lovable-uploads/9292dc48-5df3-4228-a743-6aee076f4059.png"
               alt="Grow Logo"
-              className="h-12 rounded-none bg-transparent p-0"
+              className="h-12 object-contain"
             />
           </div>
           <div>
@@ -37,13 +37,13 @@ const Footer = () => (
         </div>
 
         {/* Contact information */}
-        <div className="flex flex-col items-center lg:items-end text-center lg:text-right">
+        <div className="flex flex-col items-start text-left">
           <h4 className="text-xl font-semibold mb-4 text-green-100">Get in Touch</h4>
           
           {/* Mobile layout */}
           <div className="flex flex-col gap-4 w-full lg:hidden">
             {CONTACTS.map((contact) => (
-              <div key={contact.email} className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+              <div key={contact.email} className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-left">
                 <div className="font-semibold text-lg mb-2">{contact.name}</div>
                 <a
                   href={`mailto:${contact.email}`}
@@ -59,7 +59,7 @@ const Footer = () => (
           {/* Desktop layout */}
           <div className="hidden lg:block space-y-3">
             {CONTACTS.map((contact) => (
-              <div key={contact.email} className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-200">
+              <div key={contact.email} className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-200 text-left">
                 <div className="font-semibold text-lg mb-1">{contact.name}</div>
                 <a
                   href={`mailto:${contact.email}`}

@@ -1,6 +1,7 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users, Cpu, ArrowLeft } from "lucide-react";
+import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users, Cpu, ArrowLeft, Target, TrendingUp, Shield, Zap, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import SolutionFeatureBlock from "@/components/SolutionFeatureBlock";
 
@@ -24,36 +25,78 @@ const LearnMore = () => {
       <div className="pointer-events-none absolute left-0 top-0 w-full h-24 bg-gradient-to-b from-green-300 via-white/10 to-transparent opacity-30 z-0" />
 
       <div className="relative w-full max-w-3xl z-10">
-        {/* About Us & Mission */}
+        {/* About Us & Vision */}
         <section className="mb-12 flex flex-col items-center">
           <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-2 text-center tracking-tighter animate-fade-in drop-shadow-[0_2px_5px_rgba(34,197,94,0.06)]">
             About Us
           </h1>
           <h2 className="text-xl md:text-2xl font-semibold text-green-700 mb-3 text-center animate-fade-in [animation-delay:100ms] underline decoration-green-600 decoration-2 underline-offset-4">
-            Our Mission
+            Our Vision
           </h2>
-          <p className="text-green-900 text-base md:text-lg mb-2 text-center max-w-2xl mx-auto animate-fade-in [animation-delay:200ms]">
-            At <span className="font-semibold text-green-800">Grow Autonomous Solutions</span>,
-            we are revolutionizing agriculture through <span className="text-green-700 font-medium">AI-powered greenhouse technology</span>. Our mission is to help feed the world sustainably—using less water, less land, and fewer inputs, while producing more.
+          <p className="text-green-900 text-2xl md:text-3xl mb-4 text-center max-w-2xl mx-auto animate-fade-in [animation-delay:200ms] font-semibold leading-relaxed">
+            Our vision is to transform agriculture into a data-driven industry.
+          </p>
+          <p className="text-green-900 text-base md:text-lg text-center max-w-2xl mx-auto animate-fade-in [animation-delay:300ms] leading-relaxed">
+            By leveraging AI algorithms to process greenhouse sensor data, we aim to create a fully autonomous system that operates smoothly, optimizing growth and sustainability with minimal human intervention.
           </p>
         </section>
 
-        {/* Why We Exist */}
+        {/* What Drives Us */}
         <section className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-3 tracking-tight animate-fade-in text-center">
-            Why We Exist
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6 tracking-tight animate-fade-in text-center">
+            What Drives Us
           </h2>
-          <ul className="list-disc list-inside text-green-900 space-y-2 animate-fade-in text-left max-w-lg mx-auto">
-            <li>Rising global food demand</li>
-            <li>Climate change disrupting traditional farming</li>
-            <li>Water shortages and resource scarcity</li>
-            <li>Labor shortages in agriculture</li>
-            <li>Growing consumer demand for sustainable, traceable food</li>
-          </ul>
-          <div className="mt-4 border-t-2 border-dotted border-green-200 w-full max-w-lg mx-auto" />
-          <p className="mt-5 text-green-900 animate-fade-in [animation-delay:250ms] text-base md:text-lg text-center max-w-2xl mx-auto">
-            We believe the answer lies in intelligent, autonomous greenhouses—controlled environments that deliver consistent, optimized crop production year-round, anywhere.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in text-left max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-200 shadow-sm hover:shadow-md transition-all">
+              <div className="flex items-center mb-3">
+                <TrendingUp className="text-green-600 mr-3" size={24} />
+                <h3 className="font-semibold text-green-800">Rising Food Demand</h3>
+              </div>
+              <p className="text-green-900 text-sm">Global population growth requires innovative solutions to feed the world sustainably.</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-200 shadow-sm hover:shadow-md transition-all">
+              <div className="flex items-center mb-3">
+                <Globe className="text-blue-600 mr-3" size={24} />
+                <h3 className="font-semibold text-green-800">Climate Challenges</h3>
+              </div>
+              <p className="text-green-900 text-sm">Climate change disrupts traditional farming, demanding resilient agricultural systems.</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-200 shadow-sm hover:shadow-md transition-all">
+              <div className="flex items-center mb-3">
+                <Droplets className="text-blue-500 mr-3" size={24} />
+                <h3 className="font-semibold text-green-800">Resource Scarcity</h3>
+              </div>
+              <p className="text-green-900 text-sm">Water shortages and limited arable land require more efficient resource utilization.</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-200 shadow-sm hover:shadow-md transition-all">
+              <div className="flex items-center mb-3">
+                <Users className="text-green-700 mr-3" size={24} />
+                <h3 className="font-semibold text-green-800">Labor Shortages</h3>
+              </div>
+              <p className="text-green-900 text-sm">Agricultural workforce challenges drive the need for autonomous farming solutions.</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-200 shadow-sm hover:shadow-md transition-all">
+              <div className="flex items-center mb-3">
+                <Shield className="text-green-600 mr-3" size={24} />
+                <h3 className="font-semibold text-green-800">Sustainability Demand</h3>
+              </div>
+              <p className="text-green-900 text-sm">Consumers increasingly demand sustainable, traceable food production methods.</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-200 shadow-sm hover:shadow-md transition-all">
+              <div className="flex items-center mb-3">
+                <Zap className="text-yellow-600 mr-3" size={24} />
+                <h3 className="font-semibold text-green-800">Technological Innovation</h3>
+              </div>
+              <p className="text-green-900 text-sm">AI and IoT advances enable unprecedented precision in agricultural management.</p>
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <div className="inline-block bg-green-100 px-6 py-3 rounded-full border border-green-300">
+              <p className="text-green-900 font-medium text-base">
+                We believe intelligent, autonomous greenhouses are the answer to these challenges.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Our Solution */}
@@ -188,8 +231,8 @@ const LearnMore = () => {
             Join the Revolution
           </h2>
           <div className="text-green-900 text-lg font-medium mb-4">
-            We’re seeking partners, investors, and growers who share our vision of a smarter, greener future.<br />
-            Let’s grow a sustainable planet—together.
+            We're seeking partners, investors, and growers who share our vision of a smarter, greener future.<br />
+            Let's grow a sustainable planet—together.
           </div>
           <Button
             className="bg-green-700 hover:bg-green-900 text-white text-lg px-8 py-3 font-bold rounded-lg shadow-lg transition-all hover:scale-105 animate-fade-in [animation-delay:100ms]"
