@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { X, Type, Eye, Volume2, VolumeX, Zap } from 'lucide-react';
+import { X, Type, Eye, Volume2, VolumeX, Zap, Settings } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 
 const AccessibilityBar = () => {
@@ -9,6 +8,17 @@ const AccessibilityBar = () => {
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setScrolled(scrollTop > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     // Apply font size changes to document
@@ -50,24 +60,26 @@ const AccessibilityBar = () => {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed top-4 right-4 z-50 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+        className={`fixed top-4 right-4 z-50 bg-green-600/80 backdrop-blur-sm hover:bg-green-700/90 text-white p-2.5 rounded-full shadow-lg transition-all duration-500 hover:scale-105 ${
+          scrolled ? 'opacity-40 hover:opacity-100' : 'opacity-70 hover:opacity-100'
+        }`}
         aria-label="Open accessibility options"
       >
-        <Eye size={20} />
+        <Settings size={18} />
       </button>
     );
   }
 
   return (
-    <div className="fixed top-4 right-4 z-50 bg-white border border-green-200 rounded-lg shadow-xl p-4 w-80 animate-fade-in">
+    <div className="fixed top-4 right-4 z-50 bg-white/95 backdrop-blur-sm border border-green-200/70 rounded-lg shadow-xl p-4 w-80 animate-fade-in">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-green-800">Accessibility Options</h3>
         <button
           onClick={() => setIsOpen(false)}
-          className="text-green-600 hover:text-green-800 transition-colors"
+          className="text-green-600 hover:text-green-800 transition-colors p-1 rounded hover:bg-green-50"
           aria-label="Close accessibility options"
         >
-          <X size={20} />
+          <X size={18} />
         </button>
       </div>
 
