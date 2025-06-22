@@ -5,6 +5,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import YieldTable from "@/components/YieldTable";
 import FoundersSection from "@/components/FoundersSection";
 import Footer from "@/components/Footer";
+import AccessibilityBar from "@/components/AccessibilityBar";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
@@ -19,6 +20,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white w-full pt-16 md:pt-8">
+      <AccessibilityBar />
       <HeroSection />
       <AboutSection />
       <HowItWorksSection />
