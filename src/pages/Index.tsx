@@ -31,24 +31,17 @@ const Index = () => {
         </p>
       </div>
       <YieldTable />
-      
-      {/* Enhanced Learn More section - more prominent */}
-      <div className="max-w-4xl mx-auto flex flex-col items-center text-center px-6 my-12 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl py-8 mx-6 shadow-lg border border-green-200">
-        <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-4 animate-fade-in">Want to Learn More?</h3>
-        <p className="text-green-700 text-base md:text-lg mb-6 max-w-2xl animate-fade-in [animation-delay:100ms]">
-          Discover the science behind our AI-driven greenhouse technology, see proven results from trials, and learn about the market opportunity.
-        </p>
+      <FoundersSection />
+      {/* New Learn More button */}
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center px-6 my-8">
         <button
-          className="px-10 py-4 rounded-xl bg-gradient-to-r from-green-600 to-green-700 text-white text-xl font-bold shadow-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in [animation-delay:200ms] border-2 border-green-500 hover:border-green-600"
+          className="px-8 py-3 rounded-lg bg-green-100 text-green-800 text-lg font-semibold shadow hover:bg-green-200 transition-all duration-300 mb-4 hover:scale-105 hover:shadow-lg animate-fade-in"
           onClick={handleLearnMore}
           type="button"
         >
-          Learn More About Our Technology
+          Learn More
         </button>
       </div>
-      
-      <FoundersSection />
-      
       {/* Join the Revolution call to action */}
       <div className="max-w-4xl mx-auto text-center px-6 my-14">
         <h3 className="text-3xl md:text-4xl font-extrabold text-green-800 mb-3 animate-slide-in-left">Join the Revolution</h3>
