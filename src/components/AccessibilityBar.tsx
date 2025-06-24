@@ -60,7 +60,7 @@ const AccessibilityBar = () => {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed top-20 right-4 z-50 bg-green-600/80 backdrop-blur-sm hover:bg-green-700/90 text-white p-2.5 rounded-full shadow-lg transition-all duration-500 hover:scale-105 ${
+        className={`fixed top-4 md:top-20 right-4 z-50 bg-green-600/80 backdrop-blur-sm hover:bg-green-700/90 text-white p-2.5 rounded-full shadow-lg transition-all duration-500 hover:scale-105 ${
           scrolled ? 'opacity-40 hover:opacity-100' : 'opacity-70 hover:opacity-100'
         }`}
         aria-label="Open accessibility options"
@@ -71,7 +71,7 @@ const AccessibilityBar = () => {
   }
 
   return (
-    <div className="fixed top-20 right-4 z-50 bg-white/95 backdrop-blur-sm border border-green-200/70 rounded-lg shadow-xl p-4 w-80 animate-fade-in">
+    <div className="fixed top-4 md:top-20 right-4 z-50 bg-white/95 backdrop-blur-sm border border-green-200/70 rounded-lg shadow-xl p-4 w-80 animate-fade-in">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-green-800">Accessibility Options</h3>
         <button
