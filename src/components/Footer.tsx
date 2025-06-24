@@ -15,7 +15,7 @@ const CONTACTS = [
 ];
 
 const Footer = () => (
-  <footer className="w-full bg-gradient-to-r from-green-800 to-green-700 py-12 px-6 mt-16 border-t border-green-900 shadow-2xl">
+  <footer id="footer" className="w-full bg-gradient-to-r from-green-800 to-green-700 py-12 px-6 mt-16 border-t border-green-900 shadow-2xl">
     <div className="max-w-6xl mx-auto">
       {/* Main footer content */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between text-white gap-8 lg:gap-12 mb-8">

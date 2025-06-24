@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users, Cpu, ArrowLeft, Target, TrendingUp, Shield, Zap, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import SolutionFeatureBlock from "@/components/SolutionFeatureBlock";
+import Navigation from "@/components/Navigation";
 
 const LearnMore = () => {
   const navigate = useNavigate();
@@ -14,7 +15,10 @@ const LearnMore = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-green-100 via-white to-green-50 w-full pt-24 pb-20 px-2 md:px-0 flex flex-col items-center overflow-x-hidden">
+    <div className="min-h-screen w-full">
+      <Navigation />
+      <div className="relative bg-gradient-to-b from-green-100 via-white to-green-50 w-full pb-20 px-2 md:px-0 flex flex-col items-center overflow-x-hidden">
+      <div className="pt-16">
       {/* Pop Design: Decorative gradients, top fade, and subtle motion circles */}
       <div className="pointer-events-none absolute left-[-60px] top-[-40px] w-[190px] h-[190px] rounded-full bg-green-200 opacity-40 blur-2xl z-0 animate-fade-in" />
       <div className="pointer-events-none absolute right-[-80px] top-[18%] w-[100px] h-[100px] rounded-full bg-green-300 opacity-30 blur-2xl z-0 animate-fade-in [animation-delay:100ms]" />
@@ -42,8 +46,8 @@ const LearnMore = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-8 tracking-tight animate-fade-in text-center">
             What Drives Us
           </h2>
-          <div className="space-y-6 animate-fade-in text-left max-w-4xl mx-auto">
-            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-green-500">
+          <div className="space-y-6 text-left max-w-4xl mx-auto">
+            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-green-500 animate-fade-in [animation-delay:400ms]">
               <TrendingUp className="text-green-600 mt-1 flex-shrink-0" size={28} />
               <div>
                 <h3 className="font-bold text-green-800 text-lg mb-2">Rising Food Demand</h3>
@@ -51,7 +55,7 @@ const LearnMore = () => {
               </div>
             </div>
             
-            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500 animate-fade-in [animation-delay:500ms]">
               <Globe className="text-blue-600 mt-1 flex-shrink-0" size={28} />
               <div>
                 <h3 className="font-bold text-green-800 text-lg mb-2">Climate Challenges</h3>
@@ -59,7 +63,7 @@ const LearnMore = () => {
               </div>
             </div>
             
-            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-400">
+            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-400 animate-fade-in [animation-delay:600ms]">
               <Droplets className="text-blue-500 mt-1 flex-shrink-0" size={28} />
               <div>
                 <h3 className="font-bold text-green-800 text-lg mb-2">Resource Scarcity</h3>
@@ -67,7 +71,7 @@ const LearnMore = () => {
               </div>
             </div>
             
-            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-green-600">
+            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-green-600 animate-fade-in [animation-delay:700ms]">
               <Users className="text-green-700 mt-1 flex-shrink-0" size={28} />
               <div>
                 <h3 className="font-bold text-green-800 text-lg mb-2">Labor Shortages</h3>
@@ -75,7 +79,7 @@ const LearnMore = () => {
               </div>
             </div>
             
-            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-green-500">
+            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-green-500 animate-fade-in [animation-delay:800ms]">
               <Shield className="text-green-600 mt-1 flex-shrink-0" size={28} />
               <div>
                 <h3 className="font-bold text-green-800 text-lg mb-2">Sustainability Demand</h3>
@@ -83,7 +87,7 @@ const LearnMore = () => {
               </div>
             </div>
             
-            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-yellow-500">
+            <div className="flex items-start gap-4 p-6 bg-white rounded-lg shadow-sm border-l-4 border-yellow-500 animate-fade-in [animation-delay:900ms]">
               <Zap className="text-yellow-600 mt-1 flex-shrink-0" size={28} />
               <div>
                 <h3 className="font-bold text-green-800 text-lg mb-2">Technological Innovation</h3>
@@ -93,7 +97,7 @@ const LearnMore = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <div className="inline-block bg-green-100 px-8 py-4 rounded-full border border-green-300 shadow-sm">
+            <div className="inline-block bg-green-100 px-8 py-4 rounded-full border border-green-300 shadow-sm animate-fade-in [animation-delay:1000ms]">
               <p className="text-green-900 font-semibold text-lg">
                 We believe intelligent, autonomous greenhouses are the answer to these challenges.
               </p>
@@ -258,6 +262,8 @@ const LearnMore = () => {
             Back to Main Page
           </button>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   );

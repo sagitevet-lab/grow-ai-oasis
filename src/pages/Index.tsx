@@ -5,6 +5,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import YieldTable from "@/components/YieldTable";
 import FoundersSection from "@/components/FoundersSection";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
@@ -18,8 +19,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white w-full pt-16 md:pt-8">
-      <HeroSection />
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white w-full">
+      <Navigation />
+      <div className="pt-16">
+        <HeroSection />
       <AboutSection />
       <HowItWorksSection />
       <div className="max-w-5xl mx-auto px-6 mt-8 mb-2 text-center">
@@ -56,6 +59,7 @@ const Index = () => {
         </button>
       </div>
       <Footer />
+      </div>
     </div>
   );
 };

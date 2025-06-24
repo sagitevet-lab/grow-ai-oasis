@@ -25,7 +25,7 @@ const founders = [
 ];
 
 const FoundersSection = () => (
-  <section className="bg-green-50 py-16 px-6 border-t border-green-100">
+  <section id="founders" className="bg-green-50 py-16 px-6 border-t border-green-100">
     <div className="max-w-5xl mx-auto">
       <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-8 text-center animate-fade-in">
         Meet the Founders

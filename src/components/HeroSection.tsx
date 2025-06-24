@@ -6,7 +6,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="w-full bg-gradient-to-br from-green-50 to-white pt-8 pb-16 px-6 flex justify-center border-b border-green-200">
+    <section className="w-full bg-gradient-to-br from-green-50 to-white pb-16 px-6 flex justify-center border-b border-green-200">
       <div className="flex flex-col w-full max-w-6xl mx-auto gap-8 items-center">
         {/* Logo and main content */}
         <div className="flex flex-col md:flex-row w-full max-w-5xl mx-auto gap-0 md:gap-10 items-stretch">
@@ -30,13 +30,15 @@ const HeroSection = () => {
               <br />
               The future of farming is here.
             </p>
-            <button
-              className="px-10 py-4 rounded-lg bg-green-700 text-white text-lg font-bold shadow-lg hover:bg-green-900 transition hover:scale-105 animate-fade-in"
-              onClick={() => navigate("/start")}
-              type="button"
-            >
-              Start Now
-            </button>
+            <div className="w-full flex justify-left">
+              <button
+                className="px-10 py-4 rounded-lg bg-green-700 text-white text-lg font-bold shadow-lg hover:bg-green-900 transition hover:scale-105 animate-fade-in"
+                onClick={() => navigate("/start")}
+                type="button"
+              >
+                Start Now
+              </button>
+            </div>
           </div>
         </div>
 

@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
+import Navigation from "@/components/Navigation";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwpbbvqj";
 
@@ -63,8 +64,10 @@ const StartNow = () => {
   };
 
   return (
-    <div className="min-h-[80vh] bg-green-50 flex flex-col justify-center items-center pt-32 pb-20 px-2">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-green-100 px-6 py-10">
+    <div className="min-h-[80vh] bg-green-50 flex flex-col justify-center items-center pb-20 px-2">
+      <Navigation />
+      <div className="pt-16 w-full max-w-md">
+        <div className="bg-white rounded-2xl shadow-xl border border-green-100 px-6 py-10">
         <h2 className="text-3xl font-bold text-green-800 mb-2 text-center">
           Start Now
         </h2>
@@ -129,6 +132,7 @@ const StartNow = () => {
             </Link>
           </div>
         </form>
+        </div>
       </div>
     </div>
   );
