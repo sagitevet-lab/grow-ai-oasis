@@ -2,7 +2,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import YieldTable from "@/components/YieldTable";
 import FoundersSection from "@/components/FoundersSection";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
@@ -29,16 +28,15 @@ const Index = () => {
       <HowItWorksSection />
       <div className="max-w-5xl mx-auto px-6 mt-8 mb-2 text-center">
         <p className="text-green-900 text-lg font-semibold animate-fade-in">
-          The software seamlessly integrates with the Greenhouse control computer and various sensors,
+          The software seamlessly integrates with the greenhouse control computer and various sensors,
           autonomously managing the entire system without the need for human intervention.
         </p>
       </div>
-      <YieldTable />
       <FoundersSection />
-      {/* Enhanced Learn More button */}
+      {/* Enhanced Learn More button with animation */}
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center px-6 my-12">
         <button
-          className="px-12 py-4 rounded-lg bg-green-600 text-white text-xl font-bold shadow-lg hover:bg-green-700 transition-all duration-300 mb-4 hover:scale-105 hover:shadow-xl border-2 border-green-500"
+          className="px-12 py-4 rounded-lg bg-green-600 text-white text-xl font-bold shadow-lg hover:bg-green-700 transition-all duration-300 mb-4 hover:scale-105 hover:shadow-xl border-2 border-green-500 animate-pulse hover:animate-none transform hover:-translate-y-1"
           onClick={handleLearnMore}
           type="button"
         >
