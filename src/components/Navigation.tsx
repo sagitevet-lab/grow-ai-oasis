@@ -45,7 +45,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="w-full bg-white border-b border-green-200 shadow-sm">
+    <nav className="hidden md:block w-full bg-white border-b border-green-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
