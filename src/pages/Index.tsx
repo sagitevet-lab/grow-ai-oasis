@@ -35,14 +35,14 @@ const Index = () => {
       </div>
       <YieldTable />
       <FoundersSection />
-      {/* New Learn More button */}
-      <div className="max-w-4xl mx-auto flex flex-col items-center text-center px-6 my-8">
+      {/* Enhanced Learn More button */}
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center px-6 my-12">
         <button
-          className="px-8 py-3 rounded-lg bg-green-100 text-green-800 text-lg font-semibold shadow hover:bg-green-200 transition-all duration-300 mb-4 hover:scale-105 hover:shadow-lg animate-fade-in"
+          className="px-12 py-4 rounded-lg bg-green-600 text-white text-xl font-bold shadow-lg hover:bg-green-700 transition-all duration-300 mb-4 hover:scale-105 hover:shadow-xl border-2 border-green-500"
           onClick={handleLearnMore}
           type="button"
         >
-          Learn More
+          Learn More About Our Technology
         </button>
       </div>
       {/* Join the Revolution call to action */}
