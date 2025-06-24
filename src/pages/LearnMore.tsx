@@ -30,20 +30,20 @@ const LearnMore = () => {
       <div className="relative w-full max-w-3xl z-10">
         {/* About Us & Vision */}
         <section className="mb-12 flex flex-col items-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-6 text-center tracking-tighter animate-fade-in drop-shadow-[0_2px_5px_rgba(34,197,94,0.06)]">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-6 text-center tracking-tighter animate-fade-in drop-shadow-[0_2px_5px_rgba(34,197,94,0.06)] will-change-transform">
             About Us
           </h1>
-          <p className="text-green-600 text-xl md:text-2xl mb-4 text-center max-w-2xl mx-auto animate-fade-in [animation-delay:200ms] font-medium leading-relaxed">
+          <p className="text-green-600 text-xl md:text-2xl mb-4 text-center max-w-2xl mx-auto animate-fade-in [animation-delay:100ms] font-medium leading-relaxed will-change-transform">
             "Our vision is to transform agriculture into a data-driven industry."
           </p>
-          <p className="text-green-900 text-base md:text-lg text-center max-w-2xl mx-auto animate-fade-in [animation-delay:300ms] leading-relaxed">
+          <p className="text-green-900 text-base md:text-lg text-center max-w-2xl mx-auto animate-fade-in [animation-delay:150ms] leading-relaxed will-change-transform">
             By leveraging AI algorithms to process greenhouse sensor data, we aim to create a fully autonomous system that operates smoothly, optimizing growth and sustainability with minimal human intervention.
           </p>
         </section>
 
         {/* What Drives Us */}
         <section className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-8 tracking-tight animate-fade-in text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-8 tracking-tight animate-fade-in text-center will-change-transform">
             What Drives Us
           </h2>
           <div className="space-y-6 text-left max-w-4xl mx-auto">
@@ -107,7 +107,7 @@ const LearnMore = () => {
 
         {/* Our Solution */}
         <section className="mb-14 relative">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6 tracking-tight animate-fade-in text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6 tracking-tight animate-fade-in text-center will-change-transform">
             Our Solution: <span className="text-green-700">The AI-Driven Greenhouse</span>
           </h2>
           <div
@@ -122,37 +122,37 @@ const LearnMore = () => {
             <SolutionFeatureBlock icon={<BarChart2 className="text-green-600" />} delay={0}>
               AI & IoT for real-time, data-driven crop and climate management
             </SolutionFeatureBlock>
-            <SolutionFeatureBlock icon={<Droplets className="text-blue-400" />} delay={80}>
+            <SolutionFeatureBlock icon={<Droplets className="text-blue-400" />} delay={40}>
               Precision irrigation & fertigation to reduce water use by <span className="font-bold">up to 40%</span>
             </SolutionFeatureBlock>
             {/* Row 2 */}
-            <SolutionFeatureBlock icon={<ThermometerSun className="text-orange-500" />} delay={160}>
+            <SolutionFeatureBlock icon={<ThermometerSun className="text-orange-500" />} delay={80}>
               Advanced climate control: temperature, humidity & CO₂ managed 24/7
             </SolutionFeatureBlock>
-            <SolutionFeatureBlock icon={<Leaf className="text-green-700" />} delay={240}>
+            <SolutionFeatureBlock icon={<Leaf className="text-green-700" />} delay={120}>
               Smart lighting systems tailored to plant needs
             </SolutionFeatureBlock>
             {/* Row 3 */}
-            <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={380}>
+            <SolutionFeatureBlock icon={<Cpu className="text-green-700" />} delay={160}>
               Predictive crop management - forecast crop needs for planting and yield optimization
             </SolutionFeatureBlock>
             {/* Autonomous operation block */}
-            <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={460}>
+            <SolutionFeatureBlock icon={<UserCheck className="text-green-700" />} delay={200}>
               Autonomous operation without human intervention
             </SolutionFeatureBlock>
           </div>
-          <div className="w-full h-3 bg-gradient-to-r from-green-200 via-green-50 to-green-100 rounded-lg mt-10 opacity-85" />
+          <div className="w-full h-3 bg-gradient-to-r from-green-200 via-green-50 to-green-100 rounded-lg mt-10 opacity-85 animate-fade-in [animation-delay:250ms] will-change-transform" />
         </section>
 
         {/* Results & Proven Performance */}
         <section className="mb-14 flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2 animate-fade-in text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2 animate-fade-in text-center will-change-transform">
             Proven Performance: Autonomous Greenhouse Trials
           </h2>
-          <span className="block text-base text-green-600 font-normal mb-7 animate-fade-in text-center" style={{ marginTop: "0.25rem" }}>
+          <span className="block text-base text-green-600 font-normal mb-7 animate-fade-in [animation-delay:50ms] text-center will-change-transform" style={{ marginTop: "0.25rem" }}>
             Wageningen University Autonomous Greenhouse Challenges
           </span>
-          <div className="grid gap-6 md:grid-cols-3 w-full max-w-3xl animate-fade-in [animation-delay:100ms]">
+          <div className="grid gap-6 md:grid-cols-3 w-full max-w-3xl animate-fade-in [animation-delay:100ms] will-change-transform">
             {/* 2019 Card */}
             <div className="bg-green-50 border border-green-200 rounded-xl p-5 shadow flex flex-col h-full">
               <div className="text-green-900 font-bold text-lg mb-1">2019 – Cucumber Trial</div>
@@ -206,23 +206,23 @@ const LearnMore = () => {
 
         {/* Market Opportunity */}
         <section className="mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-5 tracking-tight animate-fade-in text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-5 tracking-tight animate-fade-in text-center will-change-transform">
             Market Opportunity
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 animate-fade-in">
-            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all hover:shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 animate-fade-in [animation-delay:50ms] will-change-transform">
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-transform duration-200 will-change-transform">
               <BarChart2 className="text-green-600 mb-2" size={36} />
               <div className="text-2xl font-bold text-green-900">$30.9B</div>
               <div className="text-green-700 text-base">Global greenhouse market (2023)</div>
               <div className="text-green-700 text-sm mt-1">Expected $63.3B by 2032</div>
             </div>
-            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all hover:shadow-md">
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-transform duration-200 will-change-transform">
               <BarChart2 className="text-blue-600 mb-2" size={36} />
               <div className="text-2xl font-bold text-green-900">$1.79B</div>
               <div className="text-green-700 text-base">Smart greenhouse tech market (2023)</div>
               <div className="text-green-700 text-sm mt-1">10.1% CAGR growth</div>
             </div>
-            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all hover:shadow-md">
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-transform duration-200 will-change-transform">
               <Users className="text-green-700 mb-2" size={36} />
               <div className="text-2xl font-bold text-green-900">57.5</div>
               <div className="text-green-700 text-base">Avg. age of U.S. farmer</div>
@@ -232,7 +232,7 @@ const LearnMore = () => {
         </section>
 
         {/* Join the Revolution */}
-        <section className="mt-12 mb-6 text-center animate-fade-in">
+        <section className="mt-12 mb-6 text-center animate-fade-in will-change-transform">
           <h2 className="text-2xl md:text-3xl text-green-800 font-extrabold mb-2">
             Join the Revolution
           </h2>
@@ -241,7 +241,7 @@ const LearnMore = () => {
             Let's grow a sustainable planet—together.
           </div>
           <Button
-            className="bg-green-700 hover:bg-green-900 text-white text-lg px-8 py-3 font-bold rounded-lg shadow-lg transition-all hover:scale-105 animate-fade-in [animation-delay:100ms]"
+            className="bg-green-700 hover:bg-green-900 text-white text-lg px-8 py-3 font-bold rounded-lg shadow-lg transition-all duration-200 hover:scale-105 animate-fade-in [animation-delay:50ms] will-change-transform"
             onClick={() => navigate("/start")}
             type="button"
             aria-label="Join the Revolution"
@@ -252,7 +252,7 @@ const LearnMore = () => {
         {/* Back Button below "Join the Revolution" */}
         <div className="flex justify-center mt-8">
           <button
-            className="underline text-black font-semibold text-base hover:text-green-700 transition-colors flex items-center gap-2 bg-transparent p-0 border-0 shadow-none"
+            className="underline text-black font-semibold text-base hover:text-green-700 transition-colors duration-200 flex items-center gap-2 bg-transparent p-0 border-0 shadow-none animate-fade-in [animation-delay:100ms] will-change-transform"
             onClick={handleBackToMain}
             aria-label="Back to Main Page"
             style={{ background: "none" }}

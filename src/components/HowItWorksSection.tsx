@@ -31,8 +31,8 @@ const HowItWorksSection = () => (
       <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-8 text-center animate-fade-in">How It Works</h3>
       <div className="grid md:grid-cols-4 gap-8">
         {features.map((f, i) => (
-          <div key={f.title} className="bg-white p-6 rounded-xl shadow-lg border border-green-100 text-center hover:scale-105 transition animate-fade-in" style={{ animationDelay: `${i * 80}ms` }}>
-            <div className="flex justify-center mb-3">{f.icon}</div>
+          <div key={f.title} className="bg-white p-6 rounded-xl shadow-lg border border-green-100 text-center hover:scale-105 hover:shadow-xl transition-all duration-300 animate-scale-in hover:-translate-y-2" style={{ animationDelay: `${i * 150}ms` }}>
+            <div className="flex justify-center mb-3 transition-transform duration-300 hover:scale-110">{f.icon}</div>
             <h4 className="font-semibold text-green-800 text-lg mb-2">{f.title}</h4>
             <p className="text-gray-600 text-sm">{f.desc}</p>
           </div>

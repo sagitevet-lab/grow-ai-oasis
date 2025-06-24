@@ -7,7 +7,7 @@ const founders = [
     title: "Co-Founder & CEO",
     desc: (
       <>
-        With 30 years of leadership in business development and automation, Ronen’s vision is to make agriculture smarter and more efficient, driving the shift toward AI-powered systems.
+        With 30 years of leadership in business development and automation, Ronen's vision is to make agriculture smarter and more efficient, driving the shift toward AI-powered systems.
       </>
     ),
     image: "/lovable-uploads/0002c872-eab4-472e-8820-ad61c9c89d0d.png",
@@ -31,9 +31,9 @@ const FoundersSection = () => (
         Meet the Founders
       </h3>
       <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-        {founders.map((f) => (
-          <div key={f.name} className="bg-white rounded-2xl p-6 shadow-lg border border-green-100 min-w-[260px] max-w-xs flex flex-col items-center animate-fade-in">
-            <img src={f.image} alt={f.name} className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-green-200" />
+        {founders.map((f, index) => (
+          <div key={f.name} className="bg-white rounded-2xl p-6 shadow-lg border border-green-100 min-w-[260px] max-w-xs flex flex-col items-center animate-scale-in hover:shadow-xl hover:scale-105 transition-all duration-300 hover:-translate-y-2" style={{ animationDelay: `${200 + index * 200}ms` }}>
+            <img src={f.image} alt={f.name} className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-green-200 transition-transform duration-300 hover:scale-110" />
             <h4 className="text-lg font-bold text-green-900 mb-1">{f.name}</h4>
             <div className="text-green-700 mb-2 font-medium">{f.title}</div>
             <p className="text-gray-600 text-sm">{f.desc}</p>

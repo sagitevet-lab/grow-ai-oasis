@@ -11,7 +11,7 @@ const AboutSection = () => (
     </div>
     {/* Center headline */}
     <div className="mb-8 text-center">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-green-800 mb-2 animate-fade-in">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-green-800 mb-2 animate-slide-in-left [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
         Now stop imagining.
         <br />
         <span className="text-green-600">The Future of Farming is Here.</span>
@@ -19,7 +19,13 @@ const AboutSection = () => (
     </div>
     {/* Company intro */}
     <div className="text-center">
-      <p className="text-green-900 text-lg max-w-3xl mx-auto leading-relaxed animate-fade-in font-medium">
+      <p className="text-green-900 text-lg max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards] font-medium">
+        "Our vision is to transform agriculture into a data-driven industry."
+      </p>
+      <p className="text-green-900 text-lg max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:600ms] opacity-0 [animation-fill-mode:forwards] font-medium mt-4">
+        By leveraging AI algorithms to process greenhouse sensor data, we aim to create a fully autonomous system that operates smoothly, optimizing growth and sustainability with minimal human intervention.
+      </p>
+      <p className="text-green-900 text-lg max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:800ms] opacity-0 [animation-fill-mode:forwards] font-medium mt-4">
         In a world facing increasing challenges in food production and climate change, <b>Grow Autonomous Solutions</b> presents a groundbreaking leap. By merging advanced AI with greenhouse technology, we are shaping sustainable agriculture for a more efficient, productive future.
       </p>
     </div>
