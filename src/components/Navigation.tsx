@@ -57,7 +57,7 @@ const Navigation = () => {
             }}
           >
             <img
-              src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
+              src={`${import.meta.env.BASE_URL}lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png`}
               alt="Grow Autonomous Solutions Logo"
               className="h-10 object-contain"
             />

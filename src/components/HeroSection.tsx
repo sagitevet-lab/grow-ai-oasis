@@ -13,7 +13,7 @@ const HeroSection = () => {
           {/* Logo top left with extra space */}
           <div className="min-w-[120px] flex flex-col items-center md:items-start md:justify-start md:mt-2 md:mr-12">
             <img
-              src="/lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png"
+              src={`${import.meta.env.BASE_URL}lovable-uploads/749b8430-d77c-4cc4-a025-8d2ae26a8f83.png`}
               alt="Grow Autonomous Solutions Logo"
               className="h-28 md:h-32 object-contain animate-scale-in hover:animate-float transition-all duration-300"
             />
@@ -57,7 +57,7 @@ const HeroSection = () => {
           {/* Greenhouse image without overlays */}
           <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-scale-in [animation-delay:900ms] opacity-0 [animation-fill-mode:forwards] hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
             <img
-              src="/lovable-uploads/c35ed6e8-ec4d-4aed-8ba2-2aa1dbe45290.png"
+              src={`${import.meta.env.BASE_URL}lovable-uploads/c35ed6e8-ec4d-4aed-8ba2-2aa1dbe45290.png`}
               alt="AI-Powered Greenhouse with Environmental Monitoring"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />

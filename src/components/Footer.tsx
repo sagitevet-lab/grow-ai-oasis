@@ -23,7 +23,7 @@ const Footer = () => (
         <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
           <div className="p-4">
             <img
-              src="/lovable-uploads/9292dc48-5df3-4228-a743-6aee076f4059.png"
+              src={`${import.meta.env.BASE_URL}lovable-uploads/9292dc48-5df3-4228-a743-6aee076f4059.png`}
               alt="Grow Logo"
               className="h-12 object-contain"
             />

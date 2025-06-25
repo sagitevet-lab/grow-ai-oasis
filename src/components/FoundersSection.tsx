@@ -10,7 +10,7 @@ const founders = [
         With 30 years of leadership in business development and automation, Ronen's vision is to make agriculture smarter and more efficient, driving the shift toward AI-powered systems.
       </>
     ),
-    image: "/lovable-uploads/0002c872-eab4-472e-8820-ad61c9c89d0d.png",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/0002c872-eab4-472e-8820-ad61c9c89d0d.png`,
   },
   {
     name: "Dror Tevet",
@@ -20,7 +20,7 @@ const founders = [
         With 30 years of experience in the agricultural sector, Dror has a global reputation for implementing sustainable agricultural practices across multiple continents.
       </>
     ),
-    image: "/lovable-uploads/75d5c710-fb03-4c73-af61-bf6439260660.png",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/75d5c710-fb03-4c73-af61-bf6439260660.png`,
   },
 ];
 
