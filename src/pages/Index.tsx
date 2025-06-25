@@ -36,7 +36,7 @@ const Index = () => {
       {/* Enhanced Learn More button with animation */}
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center px-6 my-12">
         <button
-          className="px-12 py-4 rounded-lg bg-green-600 text-white text-xl font-bold shadow-lg hover:bg-green-700 transition-all duration-300 mb-4 hover:scale-105 hover:shadow-xl border-2 border-green-500 animate-pulse hover:animate-none transform hover:-translate-y-1"
+          className="px-12 py-4 rounded-lg bg-green-600 text-white text-xl font-bold shadow-lg hover:bg-green-700 transition-colors mb-4 border-2 border-green-500"
           onClick={handleLearnMore}
           type="button"
         >
