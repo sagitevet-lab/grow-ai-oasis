@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -26,7 +25,7 @@ const HeroSection = () => {
               <span className="text-green-600">with AI-Powered Insights</span>
             </h1>
             <p className="text-xl text-green-900 mb-8 animate-slide-in-left [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
-              Smarter, Sustainable, Autonomous,
+              Smarter, Sustainable, Autonomous
               <br />
               The future of farming is here.
             </p>

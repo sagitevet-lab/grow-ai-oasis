@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { BarChart2, Leaf, Droplets, ThermometerSun, UserCheck, Users, Cpu, ArrowLeft, Target, TrendingUp, Shield, Zap, Globe } from "lucide-react";
@@ -35,7 +34,7 @@ const LearnMore = () => {
             About Us
           </h1>
           <p className="text-green-600 text-xl md:text-2xl mb-4 text-center max-w-2xl mx-auto font-medium leading-relaxed">
-            "Our vision is to transform agriculture into a data-driven industry."
+            Our vision is to transform agriculture into a data-driven industry.
           </p>
           <p className="text-green-900 text-base md:text-lg text-center max-w-2xl mx-auto leading-relaxed">
             By leveraging AI algorithms to process greenhouse sensor data, we aim to create a fully autonomous system that operates smoothly, optimizing growth and sustainability with minimal human intervention.
