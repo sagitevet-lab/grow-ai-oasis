@@ -1,15 +1,14 @@
-
 import React from "react";
 
 const CONTACTS = [
   {
     name: "Ronen Aharon",
-    email: "ronen.aharon@growgroupisrael.com",
+    email: "ronen.aharon@grow-ai.net",
     phone: "+972-522859091",
   },
   {
     name: "Dror Tevet",
-    email: "dror.tevet@growgroupisrael.com",
+    email: "dror.tevet@grow-ai.net",
     phone: "+972-522707991",
   },
 ];
